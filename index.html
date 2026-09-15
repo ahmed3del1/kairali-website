@@ -843,6 +843,16 @@
     });
     if(!res.ok) throw new Error('insert failed');
   }
+  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzUOlYQ-Ut_5qiwfAlb4MeWGQtO48fXA4bWo8K1eZ9GdN5r4QBzRjM1hFnlh4z0SPGZMQ/exec';
+  function notifyAppsScript(b){
+    try{
+      fetch(APPS_SCRIPT_URL, {
+        method:'POST',
+        mode:'no-cors',
+        body: JSON.stringify({ record:{ name:b.name, phone:b.phone, service:b.service, duration:b.duration, booking_date:b.date, booking_time:b.time } })
+      }).catch(function(){});
+    }catch(e){}
+  }
   function pad(n){ return n<10 ? '0'+n : ''+n; }
   function fmtDate(d){ return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
   function addDays(d,n){ var r=new Date(d); r.setDate(r.getDate()+n); return r; }
@@ -973,6 +983,7 @@
       confirmBtn.disabled = false;
       return;
     }
+    notifyAppsScript(booking);
     confirmBtn.disabled = false;
     var receipt = document.getElementById('receipt');
     receipt.innerHTML =
