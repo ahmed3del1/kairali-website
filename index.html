@@ -10,6 +10,7 @@
     --olive:#6E7F3D; --olive-deep:#4E5A2C; --olive-soft:#E4EAD3;
     --gold:#B9873A; --gold-soft:#F3E3C4; --border:#E6D3C4;
     --shadow: 0 1px 2px rgba(54,43,34,0.06), 0 10px 28px -16px rgba(54,43,34,0.28);
+    --bg-glass: rgba(243,231,224,0.62);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
@@ -18,12 +19,14 @@
       --olive:#A7C164; --olive-deep:#C6DC8D; --olive-soft:#33401F;
       --gold:#E0B463; --gold-soft:#3B301B; --border:#3E3223;
       --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 14px 32px -18px rgba(0,0,0,0.65);
+      --bg-glass: rgba(28,22,16,0.55);
     }
   }
   :root[data-theme="dark"]{
     --bg:#1C1610; --surface:#261F17; --surface-2:#2E251B; --ink:#F1E4D8; --ink-muted:#B4A390;
     --olive:#A7C164; --olive-deep:#C6DC8D; --olive-soft:#33401F; --gold:#E0B463; --gold-soft:#3B301B;
     --border:#3E3223; --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 14px 32px -18px rgba(0,0,0,0.65);
+    --bg-glass: rgba(28,22,16,0.55);
   }
 
   *{box-sizing:border-box;}
@@ -53,17 +56,28 @@
 
   .page{ padding:28px 0 60px; }
 
-  .hero{ text-align:center; padding:20px 0 8px; }
+  .hero{
+    position:relative; text-align:center; overflow:hidden;
+    width:100vw; margin:0 calc(50% - 50vw) 8px; max-width:100vw;
+    min-height:clamp(440px,78vh,680px);
+    display:flex; align-items:flex-end; justify-content:center;
+  }
   .hero-motif{ display:block; margin:0 auto 8px; }
   .hero-scene{ display:block; margin:0 auto 20px; max-width:100%; height:auto; }
-  .hero-photo{ display:block; width:100%; max-width:640px; height:300px; object-fit:cover; border-radius:20px; margin:0 auto 20px; box-shadow:var(--shadow); }
+  .hero-photo{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; margin:0; border-radius:0; box-shadow:none; z-index:0; }
+  .hero::after{
+    content:""; position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, rgba(8,8,8,0.10) 0%, rgba(8,8,8,0.18) 45%, rgba(8,8,8,0.82) 100%);
+  }
+  .hero-content{ position:relative; z-index:2; padding:40px 24px 56px; max-width:640px; }
   .page-photo{ display:block; width:100%; max-height:340px; object-fit:cover; border-radius:16px; margin:0 0 20px; box-shadow:var(--shadow); }
   .photo-row{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:0 0 20px; }
   .photo-row img{ width:100%; height:180px; object-fit:cover; border-radius:14px; box-shadow:var(--shadow); }
   @media (max-width:640px){ .photo-row{ grid-template-columns:1fr; } .photo-row img{ height:220px; } }
-  .hero h1{ font-family:'Cairo'; font-weight:300; font-size:clamp(26px,6vw,36px); margin:0 0 10px; line-height:1.35; }
-  .hero p.lead{ color:var(--ink-muted); font-size:14.5px; line-height:1.85; max-width:46ch; margin:0 auto 20px; }
+  .hero h1{ font-family:'Cairo'; font-weight:300; font-size:clamp(26px,6vw,36px); margin:0 0 10px; line-height:1.35; color:#fff; text-shadow:0 2px 18px rgba(0,0,0,0.35); }
+  .hero p.lead{ color:rgba(255,255,255,0.9); font-size:14.5px; line-height:1.85; max-width:46ch; margin:0 auto 20px; }
   .hero-actions{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:8px; }
+  .hero-content .btn-outline{ background:rgba(255,255,255,0.08); color:#fff; border-color:rgba(255,255,255,0.55); backdrop-filter:blur(2px); }
   .btn{
     font-family:'Tajawal'; font-weight:700; font-size:14px; border-radius:999px;
     padding:12px 24px; cursor:pointer; border:1px solid transparent; display:inline-block;
@@ -284,12 +298,14 @@
     <div class="wrap">
       <div class="hero">
         <img class="hero-photo" src="kair8.jpeg" alt="Kairali Ayurvedic Centre">
-        <h1 class="i18n" data-en="Balance Body &amp; Mind<br>The Traditional Indian Way">توازن جسمچ وعقلچ<br>على الطريقة الهندية الأصيلة</h1>
-        <p class="lead i18n" data-en="At Kairali, we bring you an authentic Ayurveda experience in the heart of Kuwait — 100% natural treatments and oils, by hands trained in traditional Indian medicine.">في Kairali، نقدملچ تجربة أيورفيدا أصيلة في قلب الكويت — علاجات وزيوت طبيعية مية بالمية، وأيادي متمرّسة درست الطب الهندي الأصيل.</p>
-        <span class="proto-badge i18n" data-en="For Women Only 🌸">خاص بالنساء فقط 🌸</span>
-        <div class="hero-actions">
-          <button class="btn btn-solid i18n" data-en="Book Your Session Now" onclick="showPage('booking')">احجزين جلستچ الحين</button>
-          <button class="btn btn-outline i18n" data-en="View All Services" onclick="showPage('services')">شوفين كل الخدمات</button>
+        <div class="hero-content">
+          <h1 class="i18n" data-en="Balance Body &amp; Mind<br>The Traditional Indian Way">توازن جسمچ وعقلچ<br>على الطريقة الهندية الأصيلة</h1>
+          <p class="lead i18n" data-en="At Kairali, we bring you an authentic Ayurveda experience in the heart of Kuwait — 100% natural treatments and oils, by hands trained in traditional Indian medicine.">في Kairali، نقدملچ تجربة أيورفيدا أصيلة في قلب الكويت — علاجات وزيوت طبيعية مية بالمية، وأيادي متمرّسة درست الطب الهندي الأصيل.</p>
+          <span class="proto-badge i18n" data-en="For Women Only 🌸">خاص بالنساء فقط 🌸</span>
+          <div class="hero-actions">
+            <button class="btn btn-solid i18n" data-en="Book Your Session Now" onclick="showPage('booking')">احجزين جلستچ الحين</button>
+            <button class="btn btn-outline i18n" data-en="View All Services" onclick="showPage('services')">شوفين كل الخدمات</button>
+          </div>
         </div>
       </div>
 
