@@ -16,6 +16,19 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('DAKM5E3C77UC8FLK7VT0');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
 <title>Kairali Ayurvedic Centre</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -302,6 +315,7 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
       <button class="i18n" data-en="Ayurveda" data-page="ayurveda">عن الأيورفيدا</button>
       <button class="i18n" data-en="Reviews" data-page="reviews">آراء الزبونات</button>
       <button class="i18n" data-en="Contact" data-page="contact">تواصل وينا</button>
+      <button class="i18n" data-en="Complaints" data-page="complaints">الشكاوى</button>
       <button class="i18n cta-nav" data-en="Book Now" data-page="booking">احجزين الحين</button>
       <button id="langToggle" type="button">EN</button>
     </div>
@@ -509,6 +523,29 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
     </div>
   </section>
 
+  <!-- COMPLAINTS -->
+  <section class="page" id="page-complaints" hidden>
+    <div class="wrap">
+      <div class="section-title">
+        <p class="eyebrow i18n" data-en="WE'RE LISTENING">إحنا صاغين</p>
+        <h2 class="i18n" data-en="Have a Complaint?">عندچ شكوى؟</h2>
+      </div>
+      <div class="review-form">
+        <p class="i18n" style="margin:0 0 16px;color:var(--ink-muted);font-size:13px;" data-en="Tell us what happened — we take every complaint seriously and will follow up with you directly.">قوليلنا وش صار — نأخذ كل شكوى بجدية ونتواصل وياچ مباشرة.</p>
+        <label class="field-label i18n" data-en="Your Name" for="complaintName">اسمچ</label>
+        <input type="text" id="complaintName" data-ph-ar="مثال: نورة العتيبي" data-ph-en="e.g. Sarah Ahmed" placeholder="مثال: نورة العتيبي">
+        <label class="field-label i18n" data-en="WhatsApp Number" for="complaintPhone">رقم الواتساب</label>
+        <input type="tel" id="complaintPhone" inputmode="numeric" placeholder="+965 5xxx xxxx">
+        <label class="field-label i18n" data-en="Employee Name (optional)" for="complaintEmployee">اسم الموظفة (اختياري)</label>
+        <input type="text" id="complaintEmployee" data-ph-ar="لو تعرفين اسمها" data-ph-en="If you know her name" placeholder="لو تعرفين اسمها">
+        <label class="field-label i18n" data-en="Your Complaint" for="complaintText">الشكوى</label>
+        <textarea id="complaintText" data-ph-ar="اكتبي شكواك بالتفصيل هني..." data-ph-en="Describe your complaint here..." placeholder="اكتبي شكواك بالتفصيل هني..."></textarea>
+        <button class="btn-primary i18n" id="submitComplaintBtn" disabled data-en="Submit Complaint">ابعتي الشكوى</button>
+        <p class="note i18n" id="complaintSentNote" hidden data-en="Your complaint has been sent — thank you for letting us know.">تم إرسال شكواچ — يعطيچ العافية على إخبارنا.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- BOOKING -->
   <section class="page" id="page-booking" hidden>
     <div class="wrap">
@@ -544,7 +581,9 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
         <label class="field-label i18n" data-en="Name" for="nameInput">الاسم</label>
         <input type="text" id="nameInput" data-ph-ar="مثال: نورة العتيبي" data-ph-en="e.g. Sarah Ahmed" placeholder="مثال: نورة العتيبي">
         <label class="field-label i18n" data-en="WhatsApp Number" for="phoneInput">رقم الواتساب</label>
-        <input type="tel" id="phoneInput" placeholder="+965 5xxx xxxx">
+        <input type="tel" id="phoneInput" inputmode="numeric" placeholder="+965 5xxx xxxx">
+        <label class="field-label i18n" data-en="Email (optional)" for="emailInput">الإيميل (اختياري)</label>
+        <input type="email" id="emailInput" placeholder="example@email.com" dir="ltr">
         <button class="btn-primary i18n" id="confirmBtn" disabled data-en="Confirm Booking">أكّدي الحجز</button>
       </section>
 
@@ -567,6 +606,7 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
   <div class="fname">🍃 Kairali Ayurvedic Centre</div>
   <div>Sabah Alsalem, Block 3, Street 306, Building 26, Floor 2 — <span class="i18n" data-en="Kuwait">الكويت</span></div>
   <div>📞 <a href="tel:+96597706554" dir="ltr">+965 9770 6554</a> &nbsp;·&nbsp; 📷 <a href="https://instagram.com/kairali_kw" target="_blank" rel="noopener">kairali_kw</a></div>
+  <div style="font-size:9.5px; opacity:0.55; margin-top:10px; direction:ltr;">This website was created by Eng: Ahmed Adel &nbsp;·&nbsp; <a href="mailto:ahmedautomation@hotmail.com">ahmedautomation@hotmail.com</a></div>
 </footer>
 
 </div>
@@ -859,7 +899,7 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
     var res = await fetch(SUPABASE_URL+'/rest/v1/bookings', {
       method:'POST',
       headers:{ apikey:SUPABASE_ANON_KEY, Authorization:'Bearer '+SUPABASE_ANON_KEY, 'Content-Type':'application/json', Prefer:'return=minimal' },
-      body: JSON.stringify({ name:b.name, phone:b.phone, service:b.service, booking_date:b.date, booking_time:b.time, duration:b.duration, price:b.price })
+      body: JSON.stringify({ name:b.name, phone:b.phone, email:b.email||null, service:b.service, booking_date:b.date, booking_time:b.time, duration:b.duration, price:b.price })
     });
     if(!res.ok) throw new Error('insert failed');
   }
@@ -869,9 +909,16 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
       fetch(APPS_SCRIPT_URL, {
         method:'POST',
         mode:'no-cors',
-        body: JSON.stringify({ record:{ name:b.name, phone:b.phone, service:b.service, duration:b.duration, booking_date:b.date, booking_time:b.time } })
+        body: JSON.stringify({ type:'booking', record:{ name:b.name, phone:b.phone, email:b.email||'', service:b.service, duration:b.duration, booking_date:b.date, booking_time:b.time, price:b.price } })
       }).catch(function(){});
     }catch(e){}
+  }
+  function notifyComplaint(c){
+    return fetch(APPS_SCRIPT_URL, {
+      method:'POST',
+      mode:'no-cors',
+      body: JSON.stringify({ type:'complaint', record:{ name:c.name, phone:c.phone, employee:c.employee||'', message:c.message } })
+    });
   }
   function pad(n){ return n<10 ? '0'+n : ''+n; }
   function fmtDate(d){ return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
@@ -892,6 +939,7 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
   var slotNote = document.getElementById('slotNote');
   var nameInput = document.getElementById('nameInput');
   var phoneInput = document.getElementById('phoneInput');
+  var emailInput = document.getElementById('emailInput');
   var confirmBtn = document.getElementById('confirmBtn');
   var continueBtn = document.getElementById('continueBtn');
 
@@ -982,7 +1030,12 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
   continueBtn.onclick = function(){ if(state.time) goToStep(3); };
   dateInput.onchange = function(){ state.date = dateInput.value; state.time=''; refreshBookings(state.date); };
   function validateDetails(){ confirmBtn.disabled = !(nameInput.value.trim().length>1 && phoneInput.value.trim().length>6 && state.time); }
-  nameInput.oninput = validateDetails; phoneInput.oninput = validateDetails;
+  nameInput.oninput = validateDetails;
+  phoneInput.oninput = function(){
+    var cleaned = phoneInput.value.replace(/[^0-9+]/g, '');
+    if(cleaned !== phoneInput.value) phoneInput.value = cleaned;
+    validateDetails();
+  };
 
   confirmBtn.onclick = async function(){
     confirmBtn.disabled = true;
@@ -995,7 +1048,7 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
       return overlap(startMin,dur,bStart,b.duration);
     });
     if(!stillFree){ alert(STR[LANG].conflictAlert); goToStep(2); confirmBtn.disabled=false; return; }
-    var booking = { date: state.date, time: state.time, duration: dur, name: nameInput.value.trim(), phone: phoneInput.value.trim(), service: state.serviceName, price: state.variant.p };
+    var booking = { date: state.date, time: state.time, duration: dur, name: nameInput.value.trim(), phone: phoneInput.value.trim(), email: emailInput.value.trim(), service: state.serviceName, price: state.variant.p };
     try{
       await insertBooking(booking);
     }catch(e){
@@ -1005,6 +1058,15 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
     }
     notifyAppsScript(booking);
     try{ if(typeof fbq==='function') fbq('trackCustom', 'BookingConfirmed', { service:booking.service, value:booking.price, currency:'KWD' }); }catch(e){}
+    try{
+      if(typeof ttq!=='undefined'){
+        ttq.track('SubmitForm', {
+          contents:[{ content_id:booking.service, content_type:'product', content_name:booking.service }],
+          value:booking.price,
+          currency:'KWD'
+        });
+      }
+    }catch(e){}
     confirmBtn.disabled = false;
     var receipt = document.getElementById('receipt');
     receipt.innerHTML =
@@ -1021,7 +1083,7 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
     stepsEl.innerHTML = '';
   };
   document.getElementById('newBookingBtn').onclick = function(){
-    state.service=null; state.variant=null; state.time=''; nameInput.value=''; phoneInput.value='';
+    state.service=null; state.variant=null; state.time=''; nameInput.value=''; phoneInput.value=''; emailInput.value='';
     document.getElementById('panel-done').hidden = true; goToStep(1);
   };
 
@@ -1130,6 +1192,31 @@ src="https://www.facebook.com/tr?id=1756146965506551&ev=PageView&noscript=1"
       faqListEl.appendChild(wrap);
     });
   }
+
+  /* ---------- complaints ---------- */
+  var complaintName = document.getElementById('complaintName');
+  var complaintPhone = document.getElementById('complaintPhone');
+  var complaintEmployee = document.getElementById('complaintEmployee');
+  var complaintText = document.getElementById('complaintText');
+  var submitComplaintBtn = document.getElementById('submitComplaintBtn');
+  var complaintSentNote = document.getElementById('complaintSentNote');
+  function validateComplaint(){
+    submitComplaintBtn.disabled = !(complaintName.value.trim().length>1 && complaintPhone.value.trim().length>6 && complaintText.value.trim().length>3);
+  }
+  complaintName.oninput = validateComplaint;
+  complaintText.oninput = validateComplaint;
+  complaintPhone.oninput = function(){
+    var cleaned = complaintPhone.value.replace(/[^0-9+]/g, '');
+    if(cleaned !== complaintPhone.value) complaintPhone.value = cleaned;
+    validateComplaint();
+  };
+  submitComplaintBtn.onclick = function(){
+    submitComplaintBtn.disabled = true;
+    notifyComplaint({ name:complaintName.value.trim(), phone:complaintPhone.value.trim(), employee:complaintEmployee.value.trim(), message:complaintText.value.trim() });
+    complaintName.value=''; complaintPhone.value=''; complaintEmployee.value=''; complaintText.value='';
+    complaintSentNote.hidden = false;
+    setTimeout(function(){ complaintSentNote.hidden = true; }, 6000);
+  };
 
   /* ---------- init ---------- */
   captureOriginals();
