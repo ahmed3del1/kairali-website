@@ -1,0 +1,1122 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Kairali Ayurvedic Centre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --bg:#F3E7E0; --surface:#FFFCFA; --surface-2:#FBF1EA;
+    --ink:#362B22; --ink-muted:#8B7A6A;
+    --olive:#6E7F3D; --olive-deep:#4E5A2C; --olive-soft:#E4EAD3;
+    --gold:#B9873A; --gold-soft:#F3E3C4; --border:#E6D3C4;
+    --shadow: 0 1px 2px rgba(54,43,34,0.06), 0 10px 28px -16px rgba(54,43,34,0.28);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1C1610; --surface:#261F17; --surface-2:#2E251B;
+      --ink:#F1E4D8; --ink-muted:#B4A390;
+      --olive:#A7C164; --olive-deep:#C6DC8D; --olive-soft:#33401F;
+      --gold:#E0B463; --gold-soft:#3B301B; --border:#3E3223;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 14px 32px -18px rgba(0,0,0,0.65);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1C1610; --surface:#261F17; --surface-2:#2E251B; --ink:#F1E4D8; --ink-muted:#B4A390;
+    --olive:#A7C164; --olive-deep:#C6DC8D; --olive-soft:#33401F; --gold:#E0B463; --gold-soft:#3B301B;
+    --border:#3E3223; --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 14px 32px -18px rgba(0,0,0,0.65);
+  }
+
+  *{box-sizing:border-box;}
+  body{ background:var(--bg); color:var(--ink); font-family:'Tajawal',sans-serif; margin:0; }
+  a{ color:inherit; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 20px; }
+
+  nav.topnav{
+    position:sticky; top:0; z-index:20; background:var(--bg);
+    border-bottom:1px solid var(--border);
+  }
+  .topnav-inner{
+    max-width:760px; margin:0 auto; padding:12px 20px;
+    display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+  }
+  .topnav .logo{ display:flex; align-items:center; gap:6px; font-family:'Cairo'; font-weight:300; font-size:17px; letter-spacing:.14em; text-transform:uppercase; }
+  .topnav .logo .lotus{ font-size:17px; }
+  .navlinks{ display:flex; flex-wrap:wrap; gap:4px; align-items:center; }
+  .navlinks button{
+    font-family:'Tajawal'; font-weight:700; font-size:12px;
+    background:none; border:none; color:var(--ink-muted); cursor:pointer;
+    padding:7px 10px; border-radius:999px;
+  }
+  .navlinks button.active{ background:var(--olive); color:#fff; }
+  .navlinks button.cta-nav{ background:var(--gold-soft); color:var(--gold); border:1px solid var(--gold); }
+  #langToggle{ background:var(--surface-2); border:1px solid var(--border); color:var(--ink); font-family:'DM Mono','Tajawal'; }
+
+  .page{ padding:28px 0 60px; }
+
+  .hero{ text-align:center; padding:20px 0 8px; }
+  .hero-motif{ display:block; margin:0 auto 8px; }
+  .hero-scene{ display:block; margin:0 auto 20px; max-width:100%; height:auto; }
+  .hero h1{ font-family:'Cairo'; font-weight:300; font-size:clamp(26px,6vw,36px); margin:0 0 10px; line-height:1.35; }
+  .hero p.lead{ color:var(--ink-muted); font-size:14.5px; line-height:1.85; max-width:46ch; margin:0 auto 20px; }
+  .hero-actions{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:8px; }
+  .btn{
+    font-family:'Tajawal'; font-weight:700; font-size:14px; border-radius:999px;
+    padding:12px 24px; cursor:pointer; border:1px solid transparent; display:inline-block;
+  }
+  .btn-solid{ background:var(--olive); color:#fff; }
+  .btn-solid:hover{ background:var(--olive-deep); }
+  .btn-outline{ background:transparent; color:var(--olive-deep); border-color:var(--olive); }
+
+  .divider{ display:flex; justify-content:center; margin:34px 0; color:var(--gold); }
+
+  .section-title{ text-align:center; margin-bottom:22px; }
+  .section-title .eyebrow{ font-family:'Tajawal'; font-weight:700; font-size:11.5px; letter-spacing:.1em; color:var(--gold); text-transform:uppercase; margin:0 0 6px; }
+  .section-title h2{ font-family:'Cairo'; font-weight:300; font-size:24px; margin:0; }
+
+  .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media (max-width:640px){ .grid-3{ grid-template-columns:1fr; } }
+  .value-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:14px;
+    padding:18px 16px; text-align:center; box-shadow:var(--shadow);
+  }
+  .value-card .icon{ font-size:24px; display:block; margin-bottom:8px; }
+  .value-card h3{ font-family:'Cairo'; font-weight:600; font-size:14.5px; margin:0 0 4px; }
+  .value-card p{ font-size:12px; color:var(--ink-muted); margin:0; line-height:1.6; }
+
+  .featured-row{ display:flex; flex-direction:column; gap:10px; margin-bottom:18px; }
+  .center-btn{ text-align:center; }
+
+  .cat-tabs{ display:flex; gap:8px; margin:0 0 16px; justify-content:center; }
+  .cat-tab{
+    font-family:'Tajawal'; font-weight:700; font-size:13px; padding:8px 16px; border-radius:999px;
+    background:var(--surface-2); border:1px solid var(--border); color:var(--ink-muted); cursor:pointer;
+  }
+  .cat-tab.active{ background:var(--olive); color:#fff; border-color:var(--olive); }
+
+  .service-card{
+    border:1px solid var(--border); border-radius:14px; padding:16px 18px;
+    background:var(--surface); box-shadow:var(--shadow); margin-bottom:10px;
+  }
+  .service-card h3{ font-family:'Cairo'; font-weight:600; font-size:16.5px; margin:0 0 4px; }
+  .service-card p.desc{ margin:0 0 12px; color:var(--ink-muted); font-size:12.5px; line-height:1.7; }
+  .service-foot{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+  .variant-row{ display:flex; flex-wrap:wrap; gap:8px; }
+  .variant-chip{ font-family:'DM Mono','Tajawal'; font-weight:700; font-size:12px; color:var(--gold); background:var(--gold-soft); border:1px solid var(--gold); border-radius:999px; padding:4px 10px; }
+  .book-link{ font-family:'Tajawal'; font-weight:700; font-size:12.5px; color:var(--olive-deep); background:var(--olive-soft); border:1px solid var(--olive); border-radius:999px; padding:7px 14px; cursor:pointer; white-space:nowrap; }
+
+  .details-toggle{ background:none; border:none; padding:0; margin:0 0 10px; font-family:'Tajawal'; font-weight:700; font-size:11.5px; color:var(--olive-deep); cursor:pointer; display:flex; align-items:center; gap:4px; }
+  .details-toggle .chev{ font-size:12px; color:var(--gold); transition:transform .15s; }
+  .details-toggle[aria-expanded="true"] .chev{ transform:rotate(180deg); }
+  .service-details{ background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:10px 12px; margin:0 0 12px; }
+  .service-details p{ margin:0 0 6px; font-size:12px; color:var(--ink-muted); line-height:1.7; }
+  .service-details p:last-child{ margin-bottom:0; }
+  .service-details strong{ color:var(--ink); }
+
+  .home-review-card{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:14px 16px; box-shadow:var(--shadow); margin-bottom:10px; }
+  .home-review-card .rhead{ display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; }
+  .home-review-card .rname{ font-family:'Cairo'; font-weight:600; font-size:13.5px; }
+  .home-review-card .rstars{ color:var(--gold); font-size:12px; letter-spacing:1px; direction:ltr; }
+  .home-review-card p{ margin:0; font-size:12.5px; color:var(--ink-muted); line-height:1.65; }
+
+  .dosha-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:20px 0; }
+  @media (max-width:640px){ .dosha-grid{ grid-template-columns:1fr; } }
+  .dosha-card{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:16px; text-align:center; }
+  .dosha-card .sym{ font-size:22px; display:block; margin-bottom:6px; }
+  .dosha-card h3{ font-family:'Cairo'; font-weight:600; font-size:14.5px; margin:0 0 6px; color:var(--gold); }
+  .dosha-card p{ font-size:11.5px; color:var(--ink-muted); margin:0; line-height:1.65; }
+
+  .prose{ font-size:13.5px; line-height:1.95; color:var(--ink); }
+  .prose p{ margin:0 0 14px; }
+
+  .rating-summary{ text-align:center; margin-bottom:24px; }
+  .rating-summary .big{ font-family:'Cairo'; font-weight:700; font-size:34px; color:var(--gold); }
+  .rating-summary .stars-static{ color:var(--gold); font-size:16px; letter-spacing:2px; margin:2px 0; }
+  .rating-summary .count{ color:var(--ink-muted); font-size:12.5px; }
+
+  .review-form{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow); margin-bottom:26px; }
+  .review-form h3{ font-family:'Cairo'; font-weight:600; font-size:16px; margin:0 0 12px; }
+  .star-picker{ display:flex; gap:6px; margin-bottom:16px; direction:ltr; justify-content:flex-end; }
+  .star-picker button{ background:none; border:none; font-size:26px; cursor:pointer; color:var(--border); line-height:1; padding:0; }
+  .star-picker button.filled{ color:var(--gold); }
+  textarea{ width:100%; font-family:'Tajawal'; font-size:14px; color:var(--ink); background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:11px 13px; margin-bottom:16px; resize:vertical; min-height:80px; }
+  textarea:focus{ outline:2px solid var(--olive); outline-offset:1px; }
+
+  .review-card{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:16px 18px; box-shadow:var(--shadow); margin-bottom:12px; }
+  .review-card .rhead{ display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .review-card .rname{ font-family:'Cairo'; font-weight:600; font-size:14.5px; }
+  .review-card .rstars{ color:var(--gold); font-size:13px; letter-spacing:1px; direction:ltr; }
+  .review-card .rdate{ color:var(--ink-muted); font-size:11px; }
+  .review-card p{ margin:0; font-size:13px; color:var(--ink); line-height:1.7; }
+  .reviews-empty{ text-align:center; color:var(--ink-muted); font-size:13px; padding:30px 10px; background:var(--surface-2); border:1px dashed var(--border); border-radius:14px; margin-bottom:20px; }
+
+  .pullquote{
+    text-align:center; font-family:'Cairo'; font-weight:600; font-size:18px;
+    color:var(--olive-deep); max-width:34ch; margin:26px auto; line-height:1.7; position:relative;
+  }
+  .pullquote::before, .pullquote::after{ color:var(--gold); font-size:22px; }
+  .pullquote::before{ content:"❝"; }
+  .pullquote::after{ content:"❞"; }
+
+  .rec-badge{ display:inline-block; font-weight:700; font-size:11px; color:#fff; background:var(--olive); border-radius:999px; padding:3px 10px; margin-bottom:8px; }
+  .rec-fallback{ color:var(--ink-muted); font-size:12.5px; line-height:1.8; text-align:center; padding:8px 4px 0; }
+
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:20px; }
+  @media (max-width:640px){ .contact-grid{ grid-template-columns:1fr; } }
+  .contact-card{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow); }
+  .contact-card h3{ font-family:'Cairo'; font-weight:600; font-size:14px; margin:0 0 6px; }
+  .contact-card p, .contact-card a{ font-size:13px; color:var(--ink-muted); text-decoration:none; line-height:1.7; }
+  .contact-card a:hover{ color:var(--olive-deep); }
+  .contact-icon{ font-size:20px; margin-bottom:6px; display:block; }
+
+  .faq-item{ background:var(--surface); border:1px solid var(--border); border-radius:12px; margin-bottom:10px; overflow:hidden; }
+  .faq-q{ width:100%; text-align:right; background:none; border:none; padding:14px 16px; font-family:'Tajawal'; font-weight:700; font-size:13.5px; color:var(--ink); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:10px; }
+  html[dir="ltr"] .faq-q{ text-align:left; }
+  .faq-q .chev{ color:var(--gold); font-size:14px; transition:transform .15s; flex:0 0 auto; }
+  .faq-q[aria-expanded="true"] .chev{ transform:rotate(180deg); }
+  .faq-a{ padding:0 16px 16px; font-size:12.5px; color:var(--ink-muted); line-height:1.8; }
+
+  .wa-float{
+    position:fixed; bottom:20px; left:20px; z-index:30;
+    width:52px; height:52px; border-radius:50%;
+    background:#25D366; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 14px rgba(0,0,0,0.3); text-decoration:none;
+  }
+  .wa-float svg{ width:26px; height:26px; }
+  .wa-float:hover{ filter:brightness(1.05); }
+
+  .ig-float{
+    position:fixed; bottom:82px; left:20px; z-index:30;
+    width:52px; height:52px; border-radius:50%;
+    background:radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 14px rgba(0,0,0,0.3); text-decoration:none;
+  }
+  .ig-float svg{ width:26px; height:26px; }
+  .ig-float:hover{ filter:brightness(1.05); }
+
+  footer.site-footer{
+    border-top:1px solid var(--border); padding:24px 0; text-align:center;
+    color:var(--ink-muted); font-size:12px; line-height:2;
+  }
+  footer.site-footer .fname{ font-family:'Cairo'; font-weight:300; font-size:15px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); }
+  footer.site-footer a{ text-decoration:none; color:var(--ink-muted); }
+  footer.site-footer a:hover{ color:var(--olive-deep); text-decoration:underline; }
+
+  /* booking widget (reused) */
+  .steps{ display:flex; justify-content:center; gap:6px; margin:0 0 24px; flex-wrap:wrap; }
+  .step-dot{ display:flex; align-items:center; gap:6px; font-size:11.5px; font-weight:700; color:var(--ink-muted); padding:5px 12px 5px 6px; border-radius:999px; background:var(--surface-2); border:1px solid var(--border); }
+  .step-dot .n{ width:18px;height:18px;border-radius:50%; background:var(--border); color:var(--surface); display:flex;align-items:center;justify-content:center; font-size:10.5px; }
+  .step-dot.active{ color:var(--olive-deep); border-color:var(--olive); background:var(--olive-soft); }
+  .step-dot.active .n{ background:var(--olive); }
+  .step-dot.done .n{ background:var(--gold); }
+  section.panel{ background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:22px; box-shadow:var(--shadow); margin-bottom:18px; }
+  h2.panel-title{ font-family:'Cairo'; font-weight:600; font-size:19px; margin:0 0 14px; }
+  .tabs{ display:flex; gap:8px; margin-bottom:16px; }
+  .tab{ flex:1; text-align:center; padding:9px 6px; border-radius:10px; font-weight:700; font-size:13.5px; background:var(--surface-2); color:var(--ink-muted); border:1px solid var(--border); cursor:pointer; }
+  .tab.active{ background:var(--olive); color:#fff; border-color:var(--olive); }
+  .service-grid{ display:flex; flex-direction:column; gap:10px; }
+  .variant-btn{ font-weight:700; font-size:12.5px; padding:7px 12px; border-radius:999px; background:var(--surface); border:1px solid var(--border); color:var(--ink); cursor:pointer; display:flex; align-items:center; gap:6px; }
+  .variant-btn .price{ color:var(--gold); font-weight:700; }
+  .variant-btn.selected{ background:var(--olive); border-color:var(--olive); color:#fff; }
+  .variant-btn.selected .price{ color:var(--gold-soft); }
+  .selected-summary{ display:flex; align-items:center; justify-content:space-between; background:var(--olive-soft); border:1px solid var(--olive); border-radius:12px; padding:10px 14px; margin-bottom:16px; font-size:13px; }
+  .selected-summary strong{ font-family:'Cairo'; font-weight:600; font-size:14.5px; }
+  .selected-summary .change{ font-size:12px; text-decoration:underline; cursor:pointer; color:var(--olive-deep); background:none; border:none; font-weight:700; }
+  label.field-label{ display:block; font-size:12.5px; font-weight:700; color:var(--ink-muted); margin:0 0 6px; }
+  input[type=date], input[type=text], input[type=tel]{ width:100%; font-size:14.5px; color:var(--ink); background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:11px 13px; margin-bottom:16px; font-family:'Tajawal'; }
+  input:focus{ outline:2px solid var(--olive); outline-offset:1px; }
+  .slot-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(84px,1fr)); gap:8px; margin-bottom:6px; }
+  .slot-btn{ font-weight:700; font-size:13px; padding:9px 4px; border-radius:10px; text-align:center; background:var(--surface-2); border:1px solid var(--border); color:var(--ink); cursor:pointer; }
+  .slot-btn.selected{ background:var(--olive); border-color:var(--olive); color:#fff; }
+  .slot-btn.taken{ background:var(--surface); color:var(--ink-muted); border-style:dashed; cursor:not-allowed; text-decoration:line-through; opacity:.6; }
+  .slot-empty{ color:var(--ink-muted); font-size:13px; padding:10px 2px; }
+  .btn-primary{ width:100%; font-weight:700; font-size:15px; background:var(--olive); color:#fff; border:none; border-radius:12px; padding:13px; cursor:pointer; font-family:'Tajawal'; }
+  .btn-primary:disabled{ background:var(--border); color:var(--ink-muted); cursor:not-allowed; }
+  .btn-primary:not(:disabled):hover{ background:var(--olive-deep); }
+  .confirm-box{ text-align:center; padding:8px 0 4px; }
+  .confirm-box .check{ width:56px;height:56px;border-radius:50%;background:var(--olive-soft); display:flex;align-items:center;justify-content:center;margin:0 auto 14px; font-size:26px; color:var(--olive); }
+  .confirm-box h2{ font-family:'Cairo'; font-weight:600; font-size:20px; margin:0 0 6px; }
+  .confirm-box p{ color:var(--ink-muted); font-size:13.5px; margin:0 0 18px; }
+  .receipt{ background:var(--surface-2); border:1px solid var(--border); border-radius:12px; padding:16px 18px; margin-bottom:18px; }
+  .receipt .row{ display:flex; justify-content:space-between; font-size:13.5px; padding:6px 0; border-bottom:1px dashed var(--border); }
+  .receipt .row:last-child{ border-bottom:none; }
+  .receipt .row span:first-child{ color:var(--ink-muted); }
+  .receipt .row span:last-child{ font-weight:700; }
+  .note{ color:var(--ink-muted); font-size:12px; text-align:center; line-height:1.8; margin-top:10px; }
+  .proto-badge{ display:block; text-align:center; font-weight:700; font-size:11.5px; color:var(--gold); background:var(--gold-soft); border:1px solid var(--gold); border-radius:999px; padding:6px 14px; margin:0 auto 22px; width:fit-content; }
+</style>
+
+<div dir="rtl" lang="ar" id="root">
+
+<a class="wa-float" id="waFloat" href="https://wa.me/96597706554?text=%D9%87%D9%84%D8%A7%D8%8C%20%D8%A3%D8%A8%D9%8A%20%D8%A3%D8%B3%D8%A3%D9%84%20%D8%B9%D9%86%20%D8%AC%D9%84%D8%B3%D8%A7%D8%AA%20Kairali" target="_blank" rel="noopener" aria-label="تواصلين وياهم على واتساب">
+  <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.5-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3c1.5.8 3.2 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.5 1 1-3.4-.2-.3C3.5 15 3 13.5 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"/></svg>
+</a>
+
+<a class="ig-float" id="igFloat" href="https://instagram.com/kairali_kw" target="_blank" rel="noopener" aria-label="تابعينهم بالانستقرام">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="#fff" stroke="none"/></svg>
+</a>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <div class="logo"><span class="lotus">🍃</span> Kairali</div>
+    <div class="navlinks" id="navlinks">
+      <button class="i18n" data-en="Home" data-page="home">الرئيسية</button>
+      <button class="i18n" data-en="About Us" data-page="about">عننا</button>
+      <button class="i18n" data-en="Massages" data-page="services">المساجات</button>
+      <button class="i18n" data-en="Ayurveda" data-page="ayurveda">عن الأيورفيدا</button>
+      <button class="i18n" data-en="Reviews" data-page="reviews">آراء الزبونات</button>
+      <button class="i18n" data-en="Contact" data-page="contact">تواصل وينا</button>
+      <button class="i18n cta-nav" data-en="Book Now" data-page="booking">احجزين الحين</button>
+      <button id="langToggle" type="button">EN</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HOME -->
+  <section class="page" id="page-home">
+    <div class="wrap">
+      <div class="hero">
+        <svg class="hero-scene" width="100%" viewBox="0 0 640 280" role="img" aria-label="رسمة توضيحية لشموع وأوراق وزجاجات زيت بألوان هادية">
+          <rect x="0" y="0" width="640" height="280" rx="20" fill="var(--surface-2)"/>
+          <ellipse cx="320" cy="235" rx="260" ry="16" fill="var(--border)" opacity="0.5"/>
+          <g>
+            <rect x="120" y="150" width="34" height="80" rx="8" fill="var(--olive-soft)" stroke="var(--olive)" stroke-width="1.5"/>
+            <rect x="126" y="128" width="22" height="26" rx="4" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
+            <rect x="132" y="112" width="10" height="18" rx="3" fill="var(--surface)" stroke="var(--gold)" stroke-width="1.2"/>
+          </g>
+          <g>
+            <rect x="185" y="170" width="26" height="62" rx="7" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
+            <rect x="191" y="150" width="14" height="22" rx="3" fill="var(--surface)" stroke="var(--gold)" stroke-width="1.2"/>
+          </g>
+          <g>
+            <path d="M255 230 C255 190 275 165 295 150 C300 190 285 215 255 230 Z" fill="var(--olive-soft)" stroke="var(--olive)" stroke-width="1.4"/>
+            <path d="M270 210 C280 190 290 175 296 160" fill="none" stroke="var(--olive)" stroke-width="1" opacity="0.6"/>
+          </g>
+          <g>
+            <ellipse cx="360" cy="222" rx="46" ry="10" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.4"/>
+            <path d="M320 222 C325 200 340 190 360 190 C380 190 395 200 400 222" fill="none" stroke="var(--gold)" stroke-width="1.4"/>
+          </g>
+          <g>
+            <rect x="34" y="118" width="16" height="26" rx="4" fill="var(--surface)" stroke="var(--gold)" stroke-width="1.2"/>
+            <path d="M42 118 C38 108 46 100 42 92" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round"/>
+          </g>
+          <g>
+            <rect x="580" y="150" width="16" height="26" rx="4" fill="var(--surface)" stroke="var(--gold)" stroke-width="1.2"/>
+            <path d="M588 150 C584 140 592 132 588 124" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round"/>
+          </g>
+          <g opacity="0.7">
+            <path d="M430 150 C420 130 425 105 445 90 C455 115 450 140 430 150 Z" fill="none" stroke="var(--olive)" stroke-width="1.4"/>
+            <path d="M470 165 C462 148 466 128 482 116 C490 136 486 155 470 165 Z" fill="none" stroke="var(--olive)" stroke-width="1.2"/>
+          </g>
+        </svg>
+        <h1 class="i18n" data-en="Balance Body &amp; Mind<br>The Traditional Indian Way">توازن جسمچ وعقلچ<br>على الطريقة الهندية الأصيلة</h1>
+        <p class="lead i18n" data-en="At Kairali, we bring you an authentic Ayurveda experience in the heart of Kuwait — 100% natural treatments and oils, by hands trained in traditional Indian medicine.">في Kairali، نقدملچ تجربة أيورفيدا أصيلة في قلب الكويت — علاجات وزيوت طبيعية مية بالمية، وأيادي متمرّسة درست الطب الهندي الأصيل.</p>
+        <div class="hero-actions">
+          <button class="btn btn-solid i18n" data-en="Book Your Session Now" onclick="showPage('booking')">احجزين جلستچ الحين</button>
+          <button class="btn btn-outline i18n" data-en="View All Services" onclick="showPage('services')">شوفين كل الخدمات</button>
+        </div>
+      </div>
+
+      <div class="divider">✦ ✦ ✦</div>
+
+      <div class="section-title">
+        <p class="eyebrow i18n" data-en="WHY KAIRALI">ليش Kairali</p>
+        <h2 class="i18n" data-en="A Different Experience From Step One">تجربة مختلفة من أول خطوة</h2>
+      </div>
+      <div class="grid-3">
+        <div class="value-card"><span class="icon">🌿</span><h3 class="i18n" data-en="100% Natural Oils">زيوت طبيعية مية بالمية</h3><p class="i18n" data-en="Authentic imported Ayurvedic blends, with no artificial ingredients">خلطات أيورفيدية أصيلة مستوردة، بدون أي مواد صناعية</p></div>
+        <div class="value-card"><span class="icon">🪔</span><h3 class="i18n" data-en="Authentic Indian Expertise">خبرة هندية أصيلة</h3><p class="i18n" data-en="Traditional techniques passed down from ancient Indian medicine">تقنيات أصيلة متوارثة من الطب الهندي القديم</p></div>
+        <div class="value-card"><span class="icon">🕊️</span><h3 class="i18n" data-en="A Fully Calm Environment">بيئة هادية بالكامل</h3><p class="i18n" data-en="A space designed for complete relaxation, away from the noise of your day">مساحة مسوّاة للاسترخاء التام، بعيد عن زحمة يومچ</p></div>
+      </div>
+
+      <div class="divider">✦ ✦ ✦</div>
+
+      <div class="section-title">
+        <p class="eyebrow i18n" data-en="MOST REQUESTED">الأكثر طلبًا</p>
+        <h2 class="i18n" data-en="Sessions To Start With">جلسات نبدأ فيها</h2>
+      </div>
+      <div class="featured-row" id="featuredRow"></div>
+      <div class="center-btn"><button class="btn btn-outline i18n" data-en="See Full List" onclick="showPage('services')">شوفين القائمة كاملة</button></div>
+
+      <div id="homeReviewsSection" hidden>
+        <div class="divider">✦ ✦ ✦</div>
+        <div class="section-title">
+          <p class="eyebrow i18n" data-en="IN THEIR WORDS">بكلامهم هم</p>
+          <h2 class="i18n" data-en="What Our Guests Say">وش يقولون زبوناتنا</h2>
+        </div>
+        <div id="homeReviewsList"></div>
+        <div class="center-btn"><button class="btn btn-outline i18n" data-en="See All Reviews" onclick="showPage('reviews')">شوفين كل الآراء</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section class="page" id="page-about" hidden>
+    <div class="wrap">
+      <div class="section-title">
+        <p class="eyebrow i18n" data-en="ABOUT US">عننا</p>
+        <h2 class="i18n" data-en="Welcome to Kairali 🌿">هلا فيچ في Kairali 🌿</h2>
+      </div>
+
+      <div class="prose">
+        <p class="i18n" data-en="We're not just another massage centre… we're a small space we built so you can find balance, away from the noise of your day and the endless demands of work and life. A moment you take just for yourself, with nothing else on your mind.">احنا مب بس مركز مساج عادي… احنا مساحة صغيرة سويناها عشان توازن نفسچ فيها، بعيد عن ضجة اليوم وسواليف الشغل والالتزامات اللي ما تخلص. لحظة تاخذينها لنفسچ بس، من غير أي شي ثاني يشغل بالچ.</p>
+        <p class="i18n" data-en="The idea came from a simple belief: body and mind are never truly separate. That's nothing new — traditional Indian medicine, Ayurveda, has known this for thousands of years. We wanted to bring that authentic experience here, to Kuwait, with skilled hands and 100% natural oils, without a single shortcut.">الفكرة أصلاً جتنا من إيمان بسيط: الجسم والعقل ما ينفصلون عن بعض. وهالكلام مب جديد — الطب الهندي القديم، الأيورفيدا، عارفه من آلاف السنين. واحنا حبينا نجيب هالخبرة الأصيلة لهني، للكويت، بأيادي متمرّسة وزيوت طبيعية مية بالمية، من غير ولا اختصار وحد.</p>
+      </div>
+
+      <p class="pullquote i18n" data-en="You walk in tired… and walk out feeling like your body has truly rested, not just relaxed for a moment.">تدخلين متعبة… وتطلعين وانتِ حاسة إن جسمچ فعلاً ارتاح، مب بس استرخيتي شوي.</p>
+
+      <div class="prose">
+        <p class="i18n" data-en="We treat every single session like it's the first one we've ever done — the same care, the same precision, and the same commitment that every detail is right for you specifically.">كل جلسة عندنا نتعامل وياها وكأنها أول جلسة نسويها في حياتنا — نفس الاهتمام، نفس الدقة، ونفس الحرص إن كل تفصيلة تكون مضبوطة ليچ إنتِ بالذات.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="value-card"><span class="icon">🕉️</span><h3 class="i18n" data-en="Authentic, Not Imitated">أصالة مب تقليد</h3><p class="i18n" data-en="Every technique we use comes from real Indian tradition, not a watered-down version">كل تقنية نستخدمها متوارثة من التقاليد الهندية الحقيقية، مب نسخة مخففة عنها</p></div>
+        <div class="value-card"><span class="icon">🌸</span><h3 class="i18n" data-en="Quality We Never Compromise">جودة ما نساوم عليها</h3><p class="i18n" data-en="Natural oils and ingredients only, from day one until now">زيوت وخامات طبيعية بس، من أول يوم لين الحين</p></div>
+        <div class="value-card"><span class="icon">💛</span><h3 class="i18n" data-en="Care That's Real, Not For Show">اهتمام صج مب شكلي</h3><p class="i18n" data-en="Your time matters to us, and your comfort is the only measure we care about">وقتچ عندنا غالي، وراحتچ هي المقياس الوحيد اللي يهمنا</p></div>
+      </div>
+
+      <div class="divider">✦ ✦ ✦</div>
+      <p class="prose i18n" style="text-align:center;" data-en="Thank you for visiting our page 🍃<br>We hope to see you soon at Kairali, so we can give you the same experience we love giving ourselves.">يعطيچ العافية إنچ زرتي صفحتنا 🍃<br>وياريت نشوفچ قريب في Kairali، عشان نديچ نفس التجربة اللي نحبها لأنفسنا.</p>
+      <div class="center-btn" style="margin-top:16px;"><button class="btn btn-solid i18n" data-en="Book Your First Session" onclick="showPage('booking')">احجزين جلستچ الأولى</button></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="page" id="page-services" hidden>
+    <div class="wrap">
+      <div class="section-title">
+        <p class="eyebrow i18n" data-en="SERVICES">الخدمات</p>
+        <h2 class="i18n" data-en="All Massages &amp; Treatments">كل المساجات والعلاجات</h2>
+      </div>
+      <div class="review-form" id="recommenderBox">
+        <h3 class="i18n" data-en="Not sure what to choose? Tell us how you feel 🌿">ما تدرين شنو تختارين؟ قوليلنا شعورچ 🌿</h3>
+        <input type="text" id="symptomInput" data-ph-ar="مثال: تعبانة من شغل المكتب وعندي شد بالرقبة" data-ph-en="e.g. tired from office work and my neck is tense" placeholder="مثال: تعبانة من شغل المكتب وعندي شد بالرقبة">
+        <button class="btn-primary i18n" id="recommendBtn" data-en="Recommend My Session">رشحيلي أنسب جلسة</button>
+        <div id="recommendResults"></div>
+      </div>
+
+      <div class="cat-tabs" id="siteCatTabs"></div>
+      <div id="siteServiceList"></div>
+    </div>
+  </section>
+
+  <!-- AYURVEDA -->
+  <section class="page" id="page-ayurveda" hidden>
+    <div class="wrap">
+      <div class="section-title">
+        <p class="eyebrow i18n" data-en="OUR PHILOSOPHY">فلسفتنا</p>
+        <h2 class="i18n" data-en="What Is Ayurveda?">شنو هي الأيورفيدا؟</h2>
+      </div>
+      <div class="prose">
+        <p class="i18n" data-en="Ayurveda is a traditional Indian medical system over 3,000 years old, which sees the body and mind as one connected whole. Instead of focusing on treating a single symptom, it looks for complete balance between the body, energy, and senses.">الأيورفيدا (Ayurveda) نظام طبي هندي أصيل عمره أكثر من 3000 سنة، يشوف الجسم والعقل وحدة واحدة مترابطة. بدل ما يركّز على علاج عرض وحده، يدوّر على التوازن الشامل بين الجسم والطاقة والحواس.</p>
+        <p class="i18n" data-en="According to this philosophy, every person's body is made up of a mix of 3 &quot;doshas&quot; (vital energies) in different proportions, and understanding that mix is the basis of any real Ayurvedic treatment or massage.">حسب هالفلسفة، جسم كل إنسان يتكوّن من مزيج من 3 "دوشات" (طاقات حيوية) بنسب مختلفة، وفهم هالمزيج هو أساس أي علاج أو مساج أيورفيدي حقيقي.</p>
+      </div>
+      <div class="dosha-grid">
+        <div class="dosha-card"><span class="sym">💨</span><h3>Vata (فاتا)</h3><p class="i18n" data-en="The energy of movement — governs breathing, blood circulation, and the nervous system">طاقة الحركة — تتحكم بالتنفس والدورة الدموية والجهاز العصبي</p></div>
+        <div class="dosha-card"><span class="sym">🔥</span><h3>Pitta (بيتا)</h3><p class="i18n" data-en="The energy of heat — responsible for digestion, metabolism, and transformation">طاقة الحرارة — مسؤولة عن الهضم والتمثيل الغذائي والتحول</p></div>
+        <div class="dosha-card"><span class="sym">🌍</span><h3>Kapha (كافا)</h3><p class="i18n" data-en="The energy of structure — gives the body its stability and strength">طاقة البنية — تعطي الجسم ثباته وقوته ومقاومته</p></div>
+      </div>
+      <div class="prose">
+        <p class="i18n" data-en="At Kairali, all our treatments (like Shirodhara, Abhyanga, and Kizhi) are rooted in authentic Indian tradition, using natural oils and herbs to support this balance — not just temporary relaxation.">في Kairali، كل علاجاتنا (مثل Shirodhara وAbhyanga وKizhi) متوارثة من التقاليد الهندية الأصيلة، وتستخدم زيوت وأعشاب طبيعية عشان تدعم هالتوازن — مب بس استرخاء مؤقت.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="page" id="page-reviews" hidden>
+    <div class="wrap">
+      <div class="section-title">
+        <p class="eyebrow i18n" data-en="CUSTOMER REVIEWS">آراء الزبونات</p>
+        <h2 class="i18n" data-en="Real Experiences From Our Guests">تجارب حقيقية من زبوناتنا</h2>
+      </div>
+
+      <div class="rating-summary" id="ratingSummary"></div>
+
+      <div class="review-form">
+        <h3 class="i18n" data-en="Share Your Experience">شاركينا تجربتچ</h3>
+        <div class="star-picker" id="starPicker">
+          <button data-v="5">★</button><button data-v="4">★</button><button data-v="3">★</button><button data-v="2">★</button><button data-v="1">★</button>
+        </div>
+        <label class="field-label i18n" data-en="Your Name" for="reviewName">اسمچ</label>
+        <input type="text" id="reviewName" data-ph-ar="مثال: هيا الفهد" data-ph-en="e.g. Sarah Ahmed" placeholder="مثال: هيا الفهد">
+        <label class="field-label i18n" data-en="Your Experience With Us" for="reviewText">تجربتچ وياهم</label>
+        <textarea id="reviewText" data-ph-ar="شلون كانت تجربتچ في Kairali؟" data-ph-en="How was your experience at Kairali?" placeholder="شلون كانت تجربتچ في Kairali؟"></textarea>
+        <button class="btn-primary i18n" id="submitReviewBtn" disabled data-en="Post Review">انشرين رأيچ</button>
+      </div>
+
+      <div id="reviewsList"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="page" id="page-contact" hidden>
+    <div class="wrap">
+      <div class="section-title">
+        <p class="eyebrow i18n" data-en="CONTACT US">تواصل وينا</p>
+        <h2 class="i18n" data-en="We're Waiting For You">احنا بانتظارچ</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <span class="contact-icon">📍</span>
+          <h3 class="i18n" data-en="Location">الموقع</h3>
+          <p>Sabah Alsalem, Block 3<br>Street 306, Building 26, Floor 2<br><span class="i18n" data-en="Kuwait">الكويت</span></p>
+        </div>
+        <div class="contact-card">
+          <span class="contact-icon">📞</span>
+          <h3 class="i18n" data-en="Phone">التلفون</h3>
+          <p><a href="tel:+96597706554" dir="ltr">+965 9770 6554</a></p>
+        </div>
+        <div class="contact-card">
+          <span class="contact-icon">📷</span>
+          <h3 class="i18n" data-en="Instagram">انستقرام</h3>
+          <p><a href="https://instagram.com/kairali_kw" target="_blank" rel="noopener">kairali_kw@</a></p>
+        </div>
+        <div class="contact-card">
+          <span class="contact-icon">🕐</span>
+          <h3 class="i18n" data-en="Working Hours">أوقات الدوام</h3>
+          <p class="i18n" data-en="Daily: 10:00 AM – 9:00 PM">يوميًا: 10:00 ص – 9:00 م</p>
+        </div>
+      </div>
+
+      <div class="divider">✦ ✦ ✦</div>
+
+      <div class="section-title">
+        <p class="eyebrow i18n" data-en="BEFORE YOU BOOK">قبل لا تحجزين</p>
+        <h2 class="i18n" data-en="Frequently Asked Questions">أسئلة تتكرر وياكم</h2>
+      </div>
+      <div id="faqList"></div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="page" id="page-booking" hidden>
+    <div class="wrap">
+      <div class="steps" id="steps"></div>
+
+      <section class="panel" id="panel-service">
+        <h2 class="panel-title i18n" data-en="Choose Your Session">اختارين جلستچ</h2>
+        <div class="tabs" id="tabs"></div>
+        <div class="service-grid" id="serviceGrid"></div>
+      </section>
+
+      <section class="panel" id="panel-datetime" hidden>
+        <h2 class="panel-title i18n" data-en="Date &amp; Time">اليوم والوقت</h2>
+        <div class="selected-summary">
+          <div><strong id="chosenServiceLabel"></strong></div>
+          <button class="change i18n" id="changeService" data-en="Change">تغيير</button>
+        </div>
+        <label class="field-label i18n" data-en="Date" for="dateInput">التاريخ</label>
+        <input type="date" id="dateInput">
+        <label class="field-label i18n" data-en="Available Times">الأوقات المتوفرة</label>
+        <div class="slot-grid" id="slotGrid"></div>
+        <p class="note" id="slotNote"></p>
+        <button class="btn-primary i18n" id="continueBtn" disabled style="margin-top:8px;" data-en="Continue">كمّلي</button>
+      </section>
+
+      <section class="panel" id="panel-details" hidden>
+        <h2 class="panel-title i18n" data-en="Your Details">بياناتچ</h2>
+        <div class="selected-summary">
+          <div><strong id="chosenDateTimeLabel"></strong></div>
+          <button class="change i18n" id="changeDateTime" data-en="Change">تغيير</button>
+        </div>
+        <label class="field-label i18n" data-en="Name" for="nameInput">الاسم</label>
+        <input type="text" id="nameInput" data-ph-ar="مثال: نورة العتيبي" data-ph-en="e.g. Sarah Ahmed" placeholder="مثال: نورة العتيبي">
+        <label class="field-label i18n" data-en="WhatsApp Number" for="phoneInput">رقم الواتساب</label>
+        <input type="tel" id="phoneInput" placeholder="+965 5xxx xxxx">
+        <button class="btn-primary i18n" id="confirmBtn" disabled data-en="Confirm Booking">أكّدي الحجز</button>
+      </section>
+
+      <section class="panel" id="panel-done" hidden>
+        <div class="confirm-box">
+          <span class="check">✓</span>
+          <h2 class="i18n" data-en="Your Booking Is Confirmed!">تم تأكيد حجزچ!</h2>
+          <p class="i18n" data-en="We'll send you a confirmation message on WhatsApp shortly">نبعتلچ رسالة تأكيد بالواتساب بعد شوي</p>
+        </div>
+        <div class="receipt" id="receipt"></div>
+        <button class="btn-primary i18n" id="newBookingBtn" data-en="Book Another Session">احجزين جلسة ثانية</button>
+      </section>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="fname">🍃 Kairali Ayurvedic Centre</div>
+  <div>Sabah Alsalem, Block 3, Street 306, Building 26, Floor 2 — <span class="i18n" data-en="Kuwait">الكويت</span></div>
+  <div>📞 <a href="tel:+96597706554" dir="ltr">+965 9770 6554</a> &nbsp;·&nbsp; 📷 <a href="https://instagram.com/kairali_kw" target="_blank" rel="noopener">kairali_kw</a></div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var LANG = 'ar';
+  try{ var savedLang = localStorage.getItem('kairali_lang'); if(savedLang==='en'||savedLang==='ar') LANG = savedLang; }catch(e){}
+
+  function T(o){ return o[LANG]; }
+
+  var STR = {
+    ar:{ from:'من', kwd:'د.ك', minutes:'دقيقة', minShort:'د', bookBtn:'احجزين', bookNowBtn:'احجزين الحين',
+      recBadge:'الأنسب ليچ 🌿', recFallback:'ما لقينا تطابق دقيق، بس Relaxation Massage غالبًا يناسبچ، أو تصفحين كل الخدمات تحت 👇',
+      noSlots:'ما فيه مواعيد متوفرة اليوم، جربين تاريخ ثاني', slotNote:'الأوقات المشطوبة محجوزة قبل',
+      basedOn:'بناءً على', reviewSingular:'رأي', reviewPlural:'آراء',
+      reviewsEmpty:'ما فيه آراء بعد — كوني أول وحدة تشارك تجربتها! 🌿',
+      conflictAlert:'معذرة، هالموعد انحجز توّه. اختارين وقت ثاني.',
+      receiptService:'الخدمة', receiptDuration:'المدة', receiptDate:'التاريخ', receiptTime:'الوقت', receiptPrice:'السعر', receiptName:'الاسم',
+      am:'ص', pm:'م', indianCat:'مساجات هندية', otherCat:'مساجات عالمية',
+      stepService:'الخدمة', stepDate:'الموعد', stepDetails:'بياناتچ',
+      detailsLabel:'التفاصيل', whatHappensLabel:'وش يصير بالجلسة', benefitLabel:'الفايدة الرئيسية' },
+    en:{ from:'From', kwd:'KWD', minutes:'min', minShort:'min', bookBtn:'Book', bookNowBtn:'Book Now',
+      recBadge:'Best Match For You 🌿', recFallback:"We couldn't find an exact match, but Relaxation Massage usually works well — or browse all services below 👇",
+      noSlots:'No slots available today, try another date', slotNote:'Strikethrough times are already booked',
+      basedOn:'Based on', reviewSingular:'review', reviewPlural:'reviews',
+      reviewsEmpty:'No reviews yet — be the first to share your experience! 🌿',
+      conflictAlert:'Sorry, this slot was just booked. Please choose another time.',
+      receiptService:'Service', receiptDuration:'Duration', receiptDate:'Date', receiptTime:'Time', receiptPrice:'Price', receiptName:'Name',
+      am:'AM', pm:'PM', indianCat:'Indian Massages', otherCat:'International Massages',
+      stepService:'Service', stepDate:'Date &amp; Time', stepDetails:'Your Details',
+      detailsLabel:'Details', whatHappensLabel:'What Happens', benefitLabel:'Main Benefit' }
+  };
+
+  var SERVICES = [
+    { id:'shirodhara', cat:'indian', name:'Shirodhara', desc:{ar:'تدفق مستمر من الزيت الدافي على الجبهة عشان يهدي الأعصاب ويحسّن النوم', en:'A continuous stream of warm oil poured on the forehead to calm the nervous system and improve sleep'},
+      whatHappens:{ar:'ترتاحين بوضع مستلقية، ويتصب زيت دافي بشكل مستمر وبطيء على جبهتچ من إناء خاص طول الجلسة.', en:'You lie back comfortably while warm oil is poured in a slow, continuous stream onto your forehead from a special vessel throughout the session.'},
+      benefit:{ar:'تهدئة عميقة للجهاز العصبي وتحسين جودة النوم.', en:'Deep calming of the nervous system and improved sleep quality.'},
+      variants:[{d:60,p:26},{d:90,p:30}] },
+    { id:'kativasti', cat:'indian', name:'Kati Vasti', desc:{ar:'كمادات عشبية لتخفيف آلام الظهر واسترخاء العضلات', en:'Herbal poultices to relieve back pain and relax the muscles'},
+      whatHappens:{ar:'ينحط سد بسيط من عجين خاص حوالين أسفل الظهر، ويتعبى بزيت عشبي دافي يفضل شوي على المنطقة.', en:'A small dam of dough is placed around the lower back and filled with warm herbal oil that rests on the area for a while.'},
+      benefit:{ar:'تخفيف آلام أسفل الظهر المزمنة.', en:'Relief from chronic lower back pain.'},
+      variants:[{d:60,p:23},{d:90,p:26}] },
+    { id:'faceneck', cat:'indian', name:'Face & Neck', desc:{ar:'تدليك للوجه والرقبة بزيت الزعفران وخلاصة اللوتس', en:'Face and neck massage with saffron oil and lotus flower extract'},
+      whatHappens:{ar:'تدليك لطيف بحركات دائرية للوجه والرقبة بزيت الزعفران وخلاصة اللوتس.', en:'A gentle circular massage of the face and neck using saffron oil and lotus flower extract.'},
+      benefit:{ar:'تنشيط الدورة الدموية بالوجه وإشراقة فورية.', en:'Boosted facial circulation and an instant glow.'},
+      variants:[{d:60,p:12}] },
+    { id:'abhyanga', cat:'indian', name:'Abhyanga', desc:{ar:'تدليك هندي أصيل منشط يقلل التعب', en:'A traditional revitalizing Indian massage that reduces fatigue'},
+      whatHappens:{ar:'تدليك بزيت دافي بحركات طويلة ومتزامنة لكل الجسم بضغط متوسط.', en:'A warm-oil massage with long, synchronized strokes over the full body at medium pressure.'},
+      benefit:{ar:'تنشيط الطاقة وتقليل التعب العام.', en:'Renewed energy and reduced overall fatigue.'},
+      variants:[{d:60,p:25},{d:90,p:29}] },
+    { id:'kizhi', cat:'indian', name:'Kizhi', desc:{ar:'كمادات عشبية دافية لتخفيف آلام العضلات والمفاصل', en:'Warm herbal compresses to relieve muscle and joint pain'},
+      whatHappens:{ar:'كمادات قماش دافية محشوة بأعشاب طبية تتمرر على الجسم بضغط منتظم.', en:'Warm cloth pouches filled with medicinal herbs are pressed rhythmically over the body.'},
+      benefit:{ar:'تخفيف آلام العضلات والمفاصل الملتهبة.', en:'Relief for inflamed muscles and joints.'},
+      variants:[{d:60,p:23},{d:90,p:27}] },
+    { id:'nasiyam', cat:'indian', name:'Nasiyam', desc:{ar:'تدليك للوجه مع بخار وقطرات عشبية للحساسية الموسمية', en:'Facial massage with steam and herbal drops for seasonal allergies'},
+      whatHappens:{ar:'تستنشقين بخار عشبي، وبعدين تنحط قطرات زيت عشبي بالأنف.', en:'You inhale herbal steam, then herbal oil drops are administered through the nose.'},
+      benefit:{ar:'تخفيف احتقان الجيوب الأنفية والحساسية الموسمية.', en:'Relief from sinus congestion and seasonal allergies.'},
+      variants:[{d:30,p:10}] },
+    { id:'headscrub', cat:'indian', name:'Indian Head Scrub & Massage', desc:{ar:'تقشير فروة الراس وتدليك بالزيت لتغذية الشعر', en:'Scalp exfoliation and oil massage to nourish the hair'},
+      whatHappens:{ar:'تقشير لطيف لفروة الراس، وبعده تدليك بالزيت لتغذية الشعر من الجذور.', en:'A gentle scalp exfoliation followed by an oil massage that nourishes hair from the roots.'},
+      benefit:{ar:'تحسين صحة فروة الراس وتقليل تساقط الشعر.', en:'Healthier scalp and reduced hair fall.'},
+      variants:[{d:60,p:18},{d:90,p:20}] },
+    { id:'holistic', cat:'indian', name:'Holistic Package', desc:{ar:'تدليك كامل الجسم + كمادات ساخنة + شيرودهارا', en:'Full body massage + hot compresses + Shirodhara'},
+      whatHappens:{ar:'رحلة متكاملة: تدليك كامل الجسم، كمادات ساخنة، وتنتهي بجلسة Shirodhara.', en:'A complete journey: full body massage, hot compresses, finishing with a Shirodhara session.'},
+      benefit:{ar:'تجربة استرخاء شاملة من أول لحظة لآخر لحظة.', en:'A complete relaxation experience from start to finish.'},
+      variants:[{d:90,p:40}] },
+    { id:'hotstone', cat:'other', name:'Hot Stone Massage', desc:{ar:'تدليك بالحجر الساخن للاسترخاء العميق', en:'Hot stone massage for deep relaxation'},
+      whatHappens:{ar:'تستخدم أحجار ساخنة ناعمة كأداة تدليك على العضلات المشدودة.', en:'Smooth heated stones are used as a massage tool over tense muscles.'},
+      benefit:{ar:'استرخاء عميق للعضلات المتيبسة بسرعة.', en:'Fast, deep relaxation for stiff muscles.'},
+      variants:[{d:60,p:18},{d:90,p:22}] },
+    { id:'relaxation', cat:'other', name:'Relaxation Massage', desc:{ar:'تدليك استرخاء كامل الجسم بزيت عطري', en:'Full body relaxation massage with aromatic oil'},
+      whatHappens:{ar:'تدليك خفيف ومتساوي لكل الجسم بزيت عطري مهدي.', en:'A light, even, full-body massage with soothing aromatic oil.'},
+      benefit:{ar:'تهدئة عامة وتقليل التوتر النفسي.', en:'General calm and reduced mental stress.'},
+      variants:[{d:60,p:16},{d:90,p:20}] },
+    { id:'reflexology', cat:'other', name:'Reflexology', desc:{ar:'تدليك القدم لتنشيط الدورة الدموية', en:'Foot massage to stimulate blood circulation'},
+      whatHappens:{ar:'ضغط بأصابع مدربة على نقاط معينة ببطن القدم.', en:'Trained finger pressure applied to specific points on the sole of the foot.'},
+      benefit:{ar:'تنشيط الدورة الدموية وتخفيف تعب الوقفة الطويلة.', en:'Better circulation and relief from long hours on your feet.'},
+      variants:[{d:60,p:10}] },
+    { id:'headshoulder', cat:'other', name:'Head & Shoulder Massage', desc:{ar:'تدليك للراس والكتف لتحسين الدورة الدموية', en:'Head and shoulder massage to improve circulation'},
+      whatHappens:{ar:'تدليك مركز على فروة الراس والرقبة والكتفين.', en:'A focused massage over the scalp, neck, and shoulders.'},
+      benefit:{ar:'تخفيف شد العضلات الناتج عن الجلسة الطويلة قدام الكمبيوتر.', en:'Relief from muscle tension caused by long hours sitting.'},
+      variants:[{d:60,p:13},{d:90,p:17}] },
+    { id:'bamboo', cat:'other', name:'Bamboo Massage', desc:{ar:'تدليك بعصي الخيزران الدافية لعضلات أعمق', en:'Warm bamboo stick massage for deeper muscles'},
+      whatHappens:{ar:'عصي خيزران دافية تتدحرج على العضلات بضغط يزيد شوي شوي.', en:'Warm bamboo sticks are rolled over the muscles with gradually increasing pressure.'},
+      benefit:{ar:'يوصل لطبقات العضلات العميقة أحسن من الإيد وحدها.', en:'Reaches deeper muscle layers more effectively than hands alone.'},
+      variants:[{d:60,p:18},{d:90,p:22}] },
+    { id:'deeptissue', cat:'other', name:'Deep Tissue Massage', desc:{ar:'تدليك بضغط قوي لتخفيف توتر العضلات', en:'Firm pressure massage to relieve muscle tension'},
+      whatHappens:{ar:'ضغط قوي ومركز على طبقات العضلات العميقة والنقاط المشدودة.', en:'Firm, focused pressure on deep muscle layers and tight spots.'},
+      benefit:{ar:'تخفيف الشد العضلي المزمن والمناطق المتيبسة.', en:'Relief from chronic muscle tension and stiff areas.'},
+      variants:[{d:60,p:18},{d:90,p:22}] },
+    { id:'thai', cat:'other', name:'Thai Massage', desc:{ar:'تمارين إطالة كامل الجسم لتحسين المرونة', en:'Full body stretching techniques to improve flexibility'},
+      whatHappens:{ar:'حركات إطالة وتمدد لطيفة للجسم كامل، أشبه بيوجا سلبية.', en:'Gentle full-body stretching movements, similar to passive yoga.'},
+      benefit:{ar:'تحسين مرونة الجسم والمفاصل.', en:'Improved body and joint flexibility.'},
+      variants:[{d:60,p:15}] },
+    { id:'shiatsu', cat:'other', name:'Shiatsu', desc:{ar:'تدليك على نقاط ضغط محددة لتقليل التوتر', en:'Pressure-point massage to reduce tension'},
+      whatHappens:{ar:'ضغط بأصابع اليد على نقاط طاقة محددة بالجسم.', en:'Finger pressure applied to specific energy points across the body.'},
+      benefit:{ar:'تقليل التوتر العام وتوازن الطاقة.', en:'Reduced overall tension and balanced energy.'},
+      variants:[{d:60,p:18},{d:90,p:22}] }
+  ];
+  var FEATURED_IDS = ['abhyanga','shirodhara','hotstone'];
+
+  var SYMPTOM_TAGS = {
+    shirodhara: ['نوم','ارق','أرق','توتر','اعصاب','أعصاب','قلق','صداع','تركيز','ذهني','تفكير','مخي','sleep','insomnia','anxiety','stress','headache','focus'],
+    kativasti: ['ظهر','فقرات','ديسك','النسا','فقرة','back','spine','sciatica'],
+    faceneck: ['وجه','بشرة','رقبة','تجاعيد','نضارة','face','skin','neck'],
+    abhyanga: ['اجهاد','إجهاد','تعب','ارهاق','إرهاق','استرخاء','طاقة','خمول','tired','fatigue','exhausted','energy','relax'],
+    kizhi: ['مفاصل','تيبس','رياضة','عضلات متيبسة','التهاب','joint','stiff','sport','inflammation'],
+    nasiyam: ['حساسية','زكام','جيوب انفية','جيوب أنفية','احتقان','انف','أنف','allergy','sinus','congestion'],
+    headscrub: ['شعر','فروة','تساقط','قشرة','جفاف الشعر','hair','scalp','dandruff'],
+    holistic: ['شامل','كل حاجة','تجربة كاملة','دلع','full','complete','everything'],
+    hotstone: ['برد','برود','عضل عميق','تصلب','شتاء','cold','deep muscle','winter'],
+    relaxation: ['استرخاء','هدوء','راحة','ضغط نفسي','قلق خفيف','سترس','relax','calm','stress'],
+    reflexology: ['قدم','رجل','وقفة','تورم','دوالي','مشي كتير','feet','foot','standing','swelling'],
+    headshoulder: ['كتف','رقبة','جلوس','كمبيوتر','لابتوب','موبايل','شد عضلي','shoulder','neck','desk','computer','laptop','sitting'],
+    bamboo: ['شد عضلي','تيبس عميق','عضلات كبيرة','deep tension','large muscles'],
+    deeptissue: ['الم مزمن','ألم مزمن','شد قوي','رياضي','عضلات متيبسة جدا','chronic pain','athlete','deep tissue'],
+    thai: ['مرونة','تيبس المفاصل','اطالة','إطالة','جسم متيبس','flexibility','stretch','stiff body'],
+    shiatsu: ['نقاط ضغط','توتر عام','صداع نصفي','ضغط عصبي','pressure points','migraine','general tension']
+  };
+
+  function normalizeAr(s){
+    return s.replace(/[إأآا]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').toLowerCase();
+  }
+  function recommendServices(text){
+    var norm = normalizeAr(text);
+    var scored = SERVICES.map(function(s){
+      var tags = SYMPTOM_TAGS[s.id] || [];
+      var score = 0;
+      tags.forEach(function(tag){ if(norm.indexOf(normalizeAr(tag)) !== -1) score++; });
+      return { service:s, score:score };
+    });
+    scored.sort(function(a,b){ return b.score-a.score; });
+    return scored.filter(function(x){ return x.score>0; }).slice(0,3);
+  }
+
+  var FAQS = [
+    { q:{ar:'أوصل قبل الموعد بكم دقيقة؟', en:'How early should I arrive before my appointment?'}, a:{ar:'ننصحچ توصلين قبل موعدچ بـ 10-15 دقيقة، عشان تاخذين وقتچ وترتاحين شوي قبل لا الجلسة تبدأ.', en:'We recommend arriving 10-15 minutes early, so you can settle in and relax a little before your session begins.'} },
+    { q:{ar:'لازم آكل قبل الجلسة لو لا؟', en:'Should I eat before my session?'}, a:{ar:'الأحسن تاكلين وجبة خفيفة قبل الجلسة بساعتين على الأقل — الجلسة تكون أريح لو معدتچ مب ثقيلة ولا فاضية تمامًا.', en:"It's best to have a light meal at least two hours before your session, for maximum comfort during the treatment."} },
+    { q:{ar:'أقدر ألغي أو أأجل الحجز؟', en:'Can I cancel or reschedule my booking?'}, a:{ar:'أكيد، تقدرين تلغين أو تأجلين حجزچ — بس حاولين تخبرينا قبل الموعد بـ 24 ساعة على الأقل عشان نقدر نعطيه لزبونة ثانية.', en:"Yes, you can cancel or reschedule — please let us know at least 24 hours in advance so we can offer the slot to another guest."} },
+    { q:{ar:'شنو ألبس للجلسة؟', en:'What should I wear to my session?'}, a:{ar:'نوفرلچ ملابس مريحة خاصة بالجلسة على طول، ما فيه داعي تجيبين شي من عندچ.', en:"We provide comfortable session attire for you, so there's no need to bring anything."} },
+    { q:{ar:'الجلسات مناسبة للحوامل؟', en:'Are sessions safe during pregnancy?'}, a:{ar:'بعض الجلسات مب مناسبة وقت الحمل. كلّمينا قبل الحجز ونساعدچ تختارين الأنسب لحالتچ.', en:"Some treatments aren't suitable during pregnancy. Please contact us before booking so we can help you choose what's best for you."} },
+    { q:{ar:'أقدر أحجز لأكثر من شخص بنفس الموعد؟', en:'Can I book for more than one person at the same time?'}, a:{ar:'حاليًا كل حجز عن طريق الموقع يكون لشخص وحد. لو تبين تحجزين مع صحبتچ بنفس الوقت، راسلينا على الواتساب ونرتبها لكم.', en:"Each online booking is currently for one person. If you'd like to book alongside a friend at the same time, message us on WhatsApp and we'll arrange it."} }
+  ];
+
+  /* ---------- i18n engine ---------- */
+  var rootEl = document.getElementById('root');
+  var langToggle = document.getElementById('langToggle');
+
+  function captureOriginals(){
+    document.querySelectorAll('.i18n').forEach(function(el){ if(el.dataset.ar===undefined) el.dataset.ar = el.innerHTML; });
+  }
+  function applyStaticI18n(){
+    document.querySelectorAll('.i18n').forEach(function(el){ el.innerHTML = LANG==='en' ? el.dataset.en : el.dataset.ar; });
+    document.querySelectorAll('[data-ph-ar]').forEach(function(el){ el.placeholder = LANG==='en' ? el.dataset.phEn : el.dataset.phAr; });
+  }
+  function applyLanguage(lang){
+    LANG = lang;
+    try{ localStorage.setItem('kairali_lang', lang); }catch(e){}
+    rootEl.setAttribute('dir', lang==='ar' ? 'rtl' : 'ltr');
+    rootEl.setAttribute('lang', lang);
+    langToggle.textContent = lang==='ar' ? 'EN' : 'عربي';
+    applyStaticI18n();
+    renderFeatured();
+    renderSiteCatTabs(); renderSiteServices();
+    recommendResults.innerHTML = ''; symptomInput.value = '';
+    renderTabs(); renderServices(); renderSteps();
+    renderSlots();
+    renderReviews();
+    renderFAQList();
+  }
+  langToggle.addEventListener('click', function(){ applyLanguage(LANG==='ar' ? 'en' : 'ar'); });
+
+  /* ---------- site navigation ---------- */
+  function showPage(id){
+    document.querySelectorAll('.page').forEach(function(p){ p.hidden = p.id !== 'page-'+id; });
+    document.querySelectorAll('#navlinks button[data-page]').forEach(function(b){ b.classList.toggle('active', b.dataset.page===id && id!=='booking'); });
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  window.showPage = showPage;
+  document.querySelectorAll('#navlinks button[data-page]').forEach(function(b){
+    b.addEventListener('click', function(){ showPage(b.dataset.page); });
+  });
+
+  /* ---------- shared service card builder ---------- */
+  function buildServiceCard(s, badgeHtml, priceLabel, bookLabel){
+    var card = document.createElement('div');
+    card.className = 'service-card';
+    card.innerHTML =
+      (badgeHtml||'') +
+      '<h3>'+s.name+'</h3><p class="desc">'+T(s.desc)+'</p>'+
+      '<button class="details-toggle" aria-expanded="false">'+STR[LANG].detailsLabel+' <span class="chev">⌄</span></button>'+
+      '<div class="service-details" hidden>'+
+        '<p><strong>'+STR[LANG].whatHappensLabel+':</strong> '+T(s.whatHappens)+'</p>'+
+        '<p><strong>'+STR[LANG].benefitLabel+':</strong> '+T(s.benefit)+'</p>'+
+      '</div>'+
+      '<div class="service-foot"><span class="variant-chip">'+priceLabel+'</span>'+
+      '<button class="book-link">'+bookLabel+'</button></div>';
+    var toggle = card.querySelector('.details-toggle');
+    var panel = card.querySelector('.service-details');
+    toggle.onclick = function(){
+      var open = toggle.getAttribute('aria-expanded')==='true';
+      toggle.setAttribute('aria-expanded', open?'false':'true');
+      panel.hidden = open;
+    };
+    card.querySelector('.book-link').onclick = function(){ startBookingWith(s.id); };
+    return card;
+  }
+
+  /* ---------- home: featured services ---------- */
+  var featuredRow = document.getElementById('featuredRow');
+  function renderFeatured(){
+    featuredRow.innerHTML = '';
+    FEATURED_IDS.forEach(function(id){
+      var s = SERVICES.filter(function(x){ return x.id===id; })[0];
+      if(!s) return;
+      var priceLabel = STR[LANG].from+' '+s.variants[0].p+' '+STR[LANG].kwd;
+      featuredRow.appendChild(buildServiceCard(s, '', priceLabel, STR[LANG].bookBtn));
+    });
+  }
+
+  /* ---------- services page ---------- */
+  var siteCat = 'indian';
+  var catTabsEl = document.getElementById('siteCatTabs');
+  var serviceListEl = document.getElementById('siteServiceList');
+  function renderSiteCatTabs(){
+    catTabsEl.innerHTML = '';
+    [['indian', STR[LANG].indianCat],['other', STR[LANG].otherCat]].forEach(function(pair){
+      var b = document.createElement('div');
+      b.className = 'cat-tab' + (siteCat===pair[0] ? ' active':'');
+      b.textContent = pair[1];
+      b.onclick = function(){ siteCat = pair[0]; renderSiteCatTabs(); renderSiteServices(); };
+      catTabsEl.appendChild(b);
+    });
+  }
+  function renderSiteServices(){
+    serviceListEl.innerHTML = '';
+    SERVICES.filter(function(s){ return s.cat===siteCat; }).forEach(function(s){
+      var chips = s.variants.map(function(v){ return v.d+' '+STR[LANG].minShort+' · '+v.p+' '+STR[LANG].kwd; }).join(' &nbsp;/&nbsp; ');
+      serviceListEl.appendChild(buildServiceCard(s, '', chips, STR[LANG].bookNowBtn));
+    });
+  }
+
+  var symptomInput = document.getElementById('symptomInput');
+  var recommendResults = document.getElementById('recommendResults');
+  function renderRecommendations(){
+    var text = symptomInput.value.trim();
+    if(text.length<3){ recommendResults.innerHTML = ''; return; }
+    var matches = recommendServices(text);
+    if(matches.length===0){
+      recommendResults.innerHTML = '<p class="rec-fallback">'+STR[LANG].recFallback+'</p>';
+      return;
+    }
+    recommendResults.innerHTML = '';
+    matches.forEach(function(m){
+      var s = m.service;
+      var chips = s.variants.map(function(v){ return v.d+' '+STR[LANG].minShort+' · '+v.p+' '+STR[LANG].kwd; }).join(' &nbsp;/&nbsp; ');
+      var badge = '<span class="rec-badge">'+STR[LANG].recBadge+'</span>';
+      recommendResults.appendChild(buildServiceCard(s, badge, chips, STR[LANG].bookNowBtn));
+    });
+  }
+  document.getElementById('recommendBtn').onclick = renderRecommendations;
+  symptomInput.addEventListener('keydown', function(e){ if(e.key==='Enter') renderRecommendations(); });
+
+  function startBookingWith(serviceId){
+    var s = SERVICES.filter(function(x){ return x.id===serviceId; })[0];
+    if(s){
+      state.service = s.id; state.serviceName = s.name; state.variant = s.variants[0]; state.cat = s.cat;
+    }
+    showPage('booking');
+    goToStep(2);
+  }
+
+  /* ---------- booking widget ---------- */
+  var OPEN_MIN = 10*60, CLOSE_MIN = 21*60, STEP = 30;
+  var SUPABASE_URL = 'https://gnfahgurttxyjmspdcgj.supabase.co';
+  var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImduZmFoZ3VydHR4eWptc3BkY2dqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk0MDIyMjAsImV4cCI6MjEwNDk3ODIyMH0.9b0S2ExKRjmK5lUCEE9Iyb6fSBS3m1dw7GH2r75buKc';
+
+  async function fetchBookingsForDate(date){
+    try{
+      var res = await fetch(SUPABASE_URL+'/rest/v1/booking_slots?booking_date=eq.'+date+'&select=booking_date,booking_time,duration', {
+        headers:{ apikey:SUPABASE_ANON_KEY, Authorization:'Bearer '+SUPABASE_ANON_KEY }
+      });
+      if(!res.ok) return [];
+      var rows = await res.json();
+      return rows.map(function(r){ return { date:r.booking_date, time:String(r.booking_time).slice(0,5), duration:r.duration }; });
+    }catch(e){ return []; }
+  }
+  async function insertBooking(b){
+    var res = await fetch(SUPABASE_URL+'/rest/v1/bookings', {
+      method:'POST',
+      headers:{ apikey:SUPABASE_ANON_KEY, Authorization:'Bearer '+SUPABASE_ANON_KEY, 'Content-Type':'application/json', Prefer:'return=minimal' },
+      body: JSON.stringify({ name:b.name, phone:b.phone, service:b.service, booking_date:b.date, booking_time:b.time, duration:b.duration, price:b.price })
+    });
+    if(!res.ok) throw new Error('insert failed');
+  }
+  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzUOlYQ-Ut_5qiwfAlb4MeWGQtO48fXA4bWo8K1eZ9GdN5r4QBzRjM1hFnlh4z0SPGZMQ/exec';
+  function notifyAppsScript(b){
+    try{
+      fetch(APPS_SCRIPT_URL, {
+        method:'POST',
+        mode:'no-cors',
+        body: JSON.stringify({ record:{ name:b.name, phone:b.phone, service:b.service, duration:b.duration, booking_date:b.date, booking_time:b.time } })
+      }).catch(function(){});
+    }catch(e){}
+  }
+  function pad(n){ return n<10 ? '0'+n : ''+n; }
+  function fmtDate(d){ return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function addDays(d,n){ var r=new Date(d); r.setDate(r.getDate()+n); return r; }
+  function minToLabel(min){ var h=Math.floor(min/60), m=min%60; var ap = h>=12?STR[LANG].pm:STR[LANG].am; var h12=h%12; if(h12===0) h12=12; return h12+':'+pad(m)+' '+ap; }
+
+  var state = { step:1, cat:'indian', service:null, variant:null, date:'', time:'', bookings:[] };
+  async function refreshBookings(date){
+    state.bookings = await fetchBookingsForDate(date);
+    renderSlots();
+  }
+
+  var stepsEl = document.getElementById('steps');
+  var tabsEl = document.getElementById('tabs');
+  var gridEl = document.getElementById('serviceGrid');
+  var dateInput = document.getElementById('dateInput');
+  var slotGrid = document.getElementById('slotGrid');
+  var slotNote = document.getElementById('slotNote');
+  var nameInput = document.getElementById('nameInput');
+  var phoneInput = document.getElementById('phoneInput');
+  var confirmBtn = document.getElementById('confirmBtn');
+  var continueBtn = document.getElementById('continueBtn');
+
+  var todayStr = fmtDate(new Date());
+  dateInput.min = todayStr; dateInput.max = fmtDate(addDays(new Date(),60)); dateInput.value = todayStr; state.date = todayStr;
+  refreshBookings(state.date);
+
+  function renderSteps(){
+    var labels = [STR[LANG].stepService, STR[LANG].stepDate, STR[LANG].stepDetails];
+    stepsEl.innerHTML = '';
+    labels.forEach(function(label, i){
+      var n = i+1;
+      var dot = document.createElement('div');
+      dot.className = 'step-dot' + (state.step===n ? ' active' : '') + (state.step>n ? ' done' : '');
+      dot.innerHTML = '<span class="n">'+(state.step>n?'✓':n)+'</span>'+label;
+      stepsEl.appendChild(dot);
+    });
+  }
+  function renderTabs(){
+    tabsEl.innerHTML = '';
+    [['indian', STR[LANG].indianCat],['other', STR[LANG].otherCat]].forEach(function(pair){
+      var b = document.createElement('div');
+      b.className = 'tab' + (state.cat===pair[0] ? ' active' : '');
+      b.textContent = pair[1];
+      b.onclick = function(){ state.cat = pair[0]; renderTabs(); renderServices(); };
+      tabsEl.appendChild(b);
+    });
+  }
+  function renderServices(){
+    gridEl.innerHTML = '';
+    SERVICES.filter(function(s){ return s.cat===state.cat; }).forEach(function(s){
+      var card = document.createElement('div');
+      card.className = 'service-card';
+      var h = document.createElement('h3'); h.textContent = s.name;
+      var p = document.createElement('p'); p.className='desc'; p.textContent = T(s.desc);
+      var row = document.createElement('div'); row.className = 'variant-row';
+      s.variants.forEach(function(v){
+        var btn = document.createElement('button');
+        var isSel = state.service===s.id && state.variant && state.variant.d===v.d;
+        btn.className = 'variant-btn' + (isSel ? ' selected' : '');
+        btn.innerHTML = v.d+' '+STR[LANG].minutes+' · <span class="price">'+v.p+' '+STR[LANG].kwd+'</span>';
+        btn.onclick = function(){ state.service=s.id; state.variant=v; state.serviceName=s.name; goToStep(2); };
+        row.appendChild(btn);
+      });
+      card.appendChild(h); card.appendChild(p); card.appendChild(row);
+      gridEl.appendChild(card);
+    });
+  }
+  function overlap(aStart,aDur,bStart,bDur){ var aEnd=aStart+aDur, bEnd=bStart+bDur; return aStart<bEnd && bStart<aEnd; }
+  function renderSlots(){
+    slotGrid.innerHTML = '';
+    if(!state.variant){ slotNote.textContent=''; return; }
+    var dur = state.variant.d;
+    var dayBookings = state.bookings.filter(function(b){ return b.date===state.date; });
+    var now = new Date(); var isToday = state.date===todayStr; var nowMin = now.getHours()*60+now.getMinutes()+60;
+    var count = 0;
+    for(var t=OPEN_MIN; t+dur<=CLOSE_MIN; t+=STEP){
+      if(isToday && t<nowMin) continue;
+      count++;
+      var startMin = t;
+      var taken = dayBookings.some(function(b){
+        var bStart = parseInt(b.time.split(':')[0])*60+parseInt(b.time.split(':')[1]);
+        return overlap(startMin,dur,bStart,b.duration);
+      });
+      var btn = document.createElement('div');
+      var timeStr = pad(Math.floor(t/60))+':'+pad(t%60);
+      btn.className = 'slot-btn' + (taken?' taken':'') + (state.time===timeStr && !taken ? ' selected':'');
+      btn.textContent = minToLabel(t);
+      if(!taken){ btn.onclick = function(ts){ return function(){ state.time = ts; renderSlots(); }; }(timeStr); }
+      slotGrid.appendChild(btn);
+    }
+    if(count===0){ slotGrid.innerHTML = '<div class="slot-empty">'+STR[LANG].noSlots+'</div>'; }
+    slotNote.textContent = STR[LANG].slotNote;
+    continueBtn.disabled = !state.time;
+  }
+  function goToStep(n){
+    state.step = n;
+    document.getElementById('panel-service').hidden = n!==1;
+    document.getElementById('panel-datetime').hidden = n!==2;
+    document.getElementById('panel-details').hidden = n!==3;
+    document.getElementById('panel-done').hidden = true;
+    if(n===2){ document.getElementById('chosenServiceLabel').textContent = state.serviceName+' · '+state.variant.d+' '+STR[LANG].minutes+' · '+state.variant.p+' '+STR[LANG].kwd; refreshBookings(state.date); }
+    if(n===3){ document.getElementById('chosenDateTimeLabel').textContent = state.date+' — '+minToLabel(parseInt(state.time.split(':')[0])*60+parseInt(state.time.split(':')[1])); }
+    renderSteps();
+  }
+  document.getElementById('changeService').onclick = function(){ goToStep(1); };
+  document.getElementById('changeDateTime').onclick = function(){ goToStep(2); };
+  continueBtn.onclick = function(){ if(state.time) goToStep(3); };
+  dateInput.onchange = function(){ state.date = dateInput.value; state.time=''; refreshBookings(state.date); };
+  function validateDetails(){ confirmBtn.disabled = !(nameInput.value.trim().length>1 && phoneInput.value.trim().length>6 && state.time); }
+  nameInput.oninput = validateDetails; phoneInput.oninput = validateDetails;
+
+  confirmBtn.onclick = async function(){
+    confirmBtn.disabled = true;
+    var dur = state.variant.d;
+    var startMin = parseInt(state.time.split(':')[0])*60+parseInt(state.time.split(':')[1]);
+    var freshBookings = await fetchBookingsForDate(state.date);
+    state.bookings = freshBookings;
+    var stillFree = !freshBookings.some(function(b){
+      var bStart = parseInt(b.time.split(':')[0])*60+parseInt(b.time.split(':')[1]);
+      return overlap(startMin,dur,bStart,b.duration);
+    });
+    if(!stillFree){ alert(STR[LANG].conflictAlert); goToStep(2); confirmBtn.disabled=false; return; }
+    var booking = { date: state.date, time: state.time, duration: dur, name: nameInput.value.trim(), phone: phoneInput.value.trim(), service: state.serviceName, price: state.variant.p };
+    try{
+      await insertBooking(booking);
+    }catch(e){
+      alert(LANG==='ar' ? 'صار خطأ بالاتصال، حاولي مرة ثانية' : 'A connection error occurred, please try again.');
+      confirmBtn.disabled = false;
+      return;
+    }
+    notifyAppsScript(booking);
+    confirmBtn.disabled = false;
+    var receipt = document.getElementById('receipt');
+    receipt.innerHTML =
+      '<div class="row"><span>'+STR[LANG].receiptService+'</span><span>'+booking.service+'</span></div>'+
+      '<div class="row"><span>'+STR[LANG].receiptDuration+'</span><span>'+booking.duration+' '+STR[LANG].minutes+'</span></div>'+
+      '<div class="row"><span>'+STR[LANG].receiptDate+'</span><span>'+booking.date+'</span></div>'+
+      '<div class="row"><span>'+STR[LANG].receiptTime+'</span><span>'+minToLabel(startMin)+'</span></div>'+
+      '<div class="row"><span>'+STR[LANG].receiptPrice+'</span><span>'+booking.price+' '+STR[LANG].kwd+'</span></div>'+
+      '<div class="row"><span>'+STR[LANG].receiptName+'</span><span>'+booking.name+'</span></div>';
+    document.getElementById('panel-service').hidden = true;
+    document.getElementById('panel-datetime').hidden = true;
+    document.getElementById('panel-details').hidden = true;
+    document.getElementById('panel-done').hidden = false;
+    stepsEl.innerHTML = '';
+  };
+  document.getElementById('newBookingBtn').onclick = function(){
+    state.service=null; state.variant=null; state.time=''; nameInput.value=''; phoneInput.value='';
+    document.getElementById('panel-done').hidden = true; goToStep(1);
+  };
+
+  /* ---------- reviews (visitor-submitted) ---------- */
+  var REVIEWS_KEY = 'kairali_proto_reviews_v1';
+  function loadReviews(){ try{ var raw = localStorage.getItem(REVIEWS_KEY); if(raw) return JSON.parse(raw); }catch(e){} return []; }
+  function saveReviews(list){ try{ localStorage.setItem(REVIEWS_KEY, JSON.stringify(list)); }catch(e){} }
+  var reviews = loadReviews();
+  var pickedStars = 0;
+
+  var starPicker = document.getElementById('starPicker');
+  var reviewName = document.getElementById('reviewName');
+  var reviewText = document.getElementById('reviewText');
+  var submitReviewBtn = document.getElementById('submitReviewBtn');
+
+  function renderStarPicker(){
+    Array.prototype.forEach.call(starPicker.children, function(btn){
+      btn.classList.toggle('filled', parseInt(btn.dataset.v) <= pickedStars);
+    });
+  }
+  Array.prototype.forEach.call(starPicker.children, function(btn){
+    btn.addEventListener('click', function(){ pickedStars = parseInt(btn.dataset.v); renderStarPicker(); validateReviewForm(); });
+  });
+  function validateReviewForm(){
+    submitReviewBtn.disabled = !(pickedStars>0 && reviewName.value.trim().length>1 && reviewText.value.trim().length>3);
+  }
+  reviewName.oninput = validateReviewForm;
+  reviewText.oninput = validateReviewForm;
+
+  function starString(n){
+    var s = ''; for(var i=1;i<=5;i++){ s += i<=n ? '★' : '☆'; } return s;
+  }
+  function renderRatingSummary(){
+    var el = document.getElementById('ratingSummary');
+    if(reviews.length===0){ el.innerHTML = ''; return; }
+    var avg = reviews.reduce(function(sum,r){ return sum+r.rating; },0) / reviews.length;
+    el.innerHTML =
+      '<div class="big">'+avg.toFixed(1)+'</div>'+
+      '<div class="stars-static">'+starString(Math.round(avg))+'</div>'+
+      '<div class="count">'+STR[LANG].basedOn+' '+reviews.length+' '+(reviews.length===1?STR[LANG].reviewSingular:STR[LANG].reviewPlural)+'</div>';
+  }
+  function renderReviewsList(){
+    var listEl = document.getElementById('reviewsList');
+    if(reviews.length===0){
+      listEl.innerHTML = '<div class="reviews-empty">'+STR[LANG].reviewsEmpty+'</div>';
+      return;
+    }
+    listEl.innerHTML = '';
+    reviews.slice().reverse().forEach(function(r){
+      var card = document.createElement('div');
+      card.className = 'review-card';
+      card.innerHTML =
+        '<div class="rhead"><span class="rname">'+r.name+'</span><span class="rstars">'+starString(r.rating)+'</span></div>'+
+        '<p>'+r.comment+'</p><div class="rdate">'+r.date+'</div>';
+      listEl.appendChild(card);
+    });
+  }
+  function renderHomeReviews(){
+    var section = document.getElementById('homeReviewsSection');
+    var listEl = document.getElementById('homeReviewsList');
+    if(reviews.length===0){ section.hidden = true; return; }
+    section.hidden = false;
+    var top = reviews.slice().sort(function(a,b){ return b.rating-a.rating; }).slice(0,3);
+    listEl.innerHTML = '';
+    top.forEach(function(r){
+      var card = document.createElement('div');
+      card.className = 'home-review-card';
+      card.innerHTML =
+        '<div class="rhead"><span class="rname">'+r.name+'</span><span class="rstars">'+starString(r.rating)+'</span></div>'+
+        '<p>'+r.comment+'</p>';
+      listEl.appendChild(card);
+    });
+  }
+  function renderReviews(){ renderRatingSummary(); renderReviewsList(); renderHomeReviews(); }
+
+  submitReviewBtn.onclick = function(){
+    var today = new Date();
+    var dateLabel = today.getFullYear()+'/'+pad(today.getMonth()+1)+'/'+pad(today.getDate());
+    reviews.push({ name: reviewName.value.trim(), rating: pickedStars, comment: reviewText.value.trim(), date: dateLabel });
+    saveReviews(reviews);
+    reviewName.value=''; reviewText.value=''; pickedStars=0;
+    renderStarPicker(); validateReviewForm(); renderReviews();
+  };
+
+  /* ---------- FAQ ---------- */
+  var faqListEl = document.getElementById('faqList');
+  function renderFAQList(){
+    faqListEl.innerHTML = '';
+    FAQS.forEach(function(item){
+      var wrap = document.createElement('div');
+      wrap.className = 'faq-item';
+      var btn = document.createElement('button');
+      btn.className = 'faq-q';
+      btn.setAttribute('aria-expanded','false');
+      btn.innerHTML = '<span>'+T(item.q)+'</span><span class="chev">⌄</span>';
+      var ans = document.createElement('p');
+      ans.className = 'faq-a';
+      ans.textContent = T(item.a);
+      ans.hidden = true;
+      btn.onclick = function(){
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+        ans.hidden = open;
+      };
+      wrap.appendChild(btn); wrap.appendChild(ans);
+      faqListEl.appendChild(wrap);
+    });
+  }
+
+  /* ---------- init ---------- */
+  captureOriginals();
+  renderStarPicker();
+  applyLanguage(LANG);
+  showPage('home');
+})();
+</script>
+
+<script defer src="/_vercel/insights/script.js"></script>
+</body></html>
