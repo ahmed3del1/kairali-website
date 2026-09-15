@@ -56,6 +56,11 @@
   .hero{ text-align:center; padding:20px 0 8px; }
   .hero-motif{ display:block; margin:0 auto 8px; }
   .hero-scene{ display:block; margin:0 auto 20px; max-width:100%; height:auto; }
+  .hero-photo{ display:block; width:100%; max-width:640px; height:300px; object-fit:cover; border-radius:20px; margin:0 auto 20px; box-shadow:var(--shadow); }
+  .page-photo{ display:block; width:100%; max-height:340px; object-fit:cover; border-radius:16px; margin:0 0 20px; box-shadow:var(--shadow); }
+  .photo-row{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:0 0 20px; }
+  .photo-row img{ width:100%; height:180px; object-fit:cover; border-radius:14px; box-shadow:var(--shadow); }
+  @media (max-width:640px){ .photo-row{ grid-template-columns:1fr; } .photo-row img{ height:220px; } }
   .hero h1{ font-family:'Cairo'; font-weight:300; font-size:clamp(26px,6vw,36px); margin:0 0 10px; line-height:1.35; }
   .hero p.lead{ color:var(--ink-muted); font-size:14.5px; line-height:1.85; max-width:46ch; margin:0 auto 20px; }
   .hero-actions{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:8px; }
@@ -278,41 +283,10 @@
   <section class="page" id="page-home">
     <div class="wrap">
       <div class="hero">
-        <svg class="hero-scene" width="100%" viewBox="0 0 640 280" role="img" aria-label="رسمة توضيحية لشموع وأوراق وزجاجات زيت بألوان هادية">
-          <rect x="0" y="0" width="640" height="280" rx="20" fill="var(--surface-2)"/>
-          <ellipse cx="320" cy="235" rx="260" ry="16" fill="var(--border)" opacity="0.5"/>
-          <g>
-            <rect x="120" y="150" width="34" height="80" rx="8" fill="var(--olive-soft)" stroke="var(--olive)" stroke-width="1.5"/>
-            <rect x="126" y="128" width="22" height="26" rx="4" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
-            <rect x="132" y="112" width="10" height="18" rx="3" fill="var(--surface)" stroke="var(--gold)" stroke-width="1.2"/>
-          </g>
-          <g>
-            <rect x="185" y="170" width="26" height="62" rx="7" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
-            <rect x="191" y="150" width="14" height="22" rx="3" fill="var(--surface)" stroke="var(--gold)" stroke-width="1.2"/>
-          </g>
-          <g>
-            <path d="M255 230 C255 190 275 165 295 150 C300 190 285 215 255 230 Z" fill="var(--olive-soft)" stroke="var(--olive)" stroke-width="1.4"/>
-            <path d="M270 210 C280 190 290 175 296 160" fill="none" stroke="var(--olive)" stroke-width="1" opacity="0.6"/>
-          </g>
-          <g>
-            <ellipse cx="360" cy="222" rx="46" ry="10" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.4"/>
-            <path d="M320 222 C325 200 340 190 360 190 C380 190 395 200 400 222" fill="none" stroke="var(--gold)" stroke-width="1.4"/>
-          </g>
-          <g>
-            <rect x="34" y="118" width="16" height="26" rx="4" fill="var(--surface)" stroke="var(--gold)" stroke-width="1.2"/>
-            <path d="M42 118 C38 108 46 100 42 92" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round"/>
-          </g>
-          <g>
-            <rect x="580" y="150" width="16" height="26" rx="4" fill="var(--surface)" stroke="var(--gold)" stroke-width="1.2"/>
-            <path d="M588 150 C584 140 592 132 588 124" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round"/>
-          </g>
-          <g opacity="0.7">
-            <path d="M430 150 C420 130 425 105 445 90 C455 115 450 140 430 150 Z" fill="none" stroke="var(--olive)" stroke-width="1.4"/>
-            <path d="M470 165 C462 148 466 128 482 116 C490 136 486 155 470 165 Z" fill="none" stroke="var(--olive)" stroke-width="1.2"/>
-          </g>
-        </svg>
+        <img class="hero-photo" src="kair8.jpeg" alt="Kairali Ayurvedic Centre">
         <h1 class="i18n" data-en="Balance Body &amp; Mind<br>The Traditional Indian Way">توازن جسمچ وعقلچ<br>على الطريقة الهندية الأصيلة</h1>
         <p class="lead i18n" data-en="At Kairali, we bring you an authentic Ayurveda experience in the heart of Kuwait — 100% natural treatments and oils, by hands trained in traditional Indian medicine.">في Kairali، نقدملچ تجربة أيورفيدا أصيلة في قلب الكويت — علاجات وزيوت طبيعية مية بالمية، وأيادي متمرّسة درست الطب الهندي الأصيل.</p>
+        <span class="proto-badge i18n" data-en="For Women Only 🌸">خاص بالنساء فقط 🌸</span>
         <div class="hero-actions">
           <button class="btn btn-solid i18n" data-en="Book Your Session Now" onclick="showPage('booking')">احجزين جلستچ الحين</button>
           <button class="btn btn-outline i18n" data-en="View All Services" onclick="showPage('services')">شوفين كل الخدمات</button>
@@ -360,6 +334,11 @@
         <h2 class="i18n" data-en="Welcome to Kairali 🌿">هلا فيچ في Kairali 🌿</h2>
       </div>
 
+      <div class="photo-row">
+        <img src="kair1.jpeg" alt="Kairali Ayurvedic Centre">
+        <img src="kair5.jpeg" alt="Kairali Ayurvedic Centre">
+      </div>
+
       <div class="prose">
         <p class="i18n" data-en="We're not just another massage centre… we're a small space we built so you can find balance, away from the noise of your day and the endless demands of work and life. A moment you take just for yourself, with nothing else on your mind.">احنا مب بس مركز مساج عادي… احنا مساحة صغيرة سويناها عشان توازن نفسچ فيها، بعيد عن ضجة اليوم وسواليف الشغل والالتزامات اللي ما تخلص. لحظة تاخذينها لنفسچ بس، من غير أي شي ثاني يشغل بالچ.</p>
         <p class="i18n" data-en="The idea came from a simple belief: body and mind are never truly separate. That's nothing new — traditional Indian medicine, Ayurveda, has known this for thousands of years. We wanted to bring that authentic experience here, to Kuwait, with skilled hands and 100% natural oils, without a single shortcut.">الفكرة أصلاً جتنا من إيمان بسيط: الجسم والعقل ما ينفصلون عن بعض. وهالكلام مب جديد — الطب الهندي القديم، الأيورفيدا، عارفه من آلاف السنين. واحنا حبينا نجيب هالخبرة الأصيلة لهني، للكويت، بأيادي متمرّسة وزيوت طبيعية مية بالمية، من غير ولا اختصار وحد.</p>
@@ -390,6 +369,7 @@
         <p class="eyebrow i18n" data-en="SERVICES">الخدمات</p>
         <h2 class="i18n" data-en="All Massages &amp; Treatments">كل المساجات والعلاجات</h2>
       </div>
+      <img class="page-photo" src="kair2.jpeg" alt="Kairali Ayurvedic Centre">
       <div class="review-form" id="recommenderBox">
         <h3 class="i18n" data-en="Not sure what to choose? Tell us how you feel 🌿">ما تدرين شنو تختارين؟ قوليلنا شعورچ 🌿</h3>
         <input type="text" id="symptomInput" data-ph-ar="مثال: تعبانة من شغل المكتب وعندي شد بالرقبة" data-ph-en="e.g. tired from office work and my neck is tense" placeholder="مثال: تعبانة من شغل المكتب وعندي شد بالرقبة">
@@ -413,6 +393,10 @@
         <p class="i18n" data-en="Ayurveda is a traditional Indian medical system over 3,000 years old, which sees the body and mind as one connected whole. Instead of focusing on treating a single symptom, it looks for complete balance between the body, energy, and senses.">الأيورفيدا (Ayurveda) نظام طبي هندي أصيل عمره أكثر من 3000 سنة، يشوف الجسم والعقل وحدة واحدة مترابطة. بدل ما يركّز على علاج عرض وحده، يدوّر على التوازن الشامل بين الجسم والطاقة والحواس.</p>
         <p class="i18n" data-en="According to this philosophy, every person's body is made up of a mix of 3 &quot;doshas&quot; (vital energies) in different proportions, and understanding that mix is the basis of any real Ayurvedic treatment or massage.">حسب هالفلسفة، جسم كل إنسان يتكوّن من مزيج من 3 "دوشات" (طاقات حيوية) بنسب مختلفة، وفهم هالمزيج هو أساس أي علاج أو مساج أيورفيدي حقيقي.</p>
       </div>
+      <div class="photo-row">
+        <img src="kair3.jpeg" alt="Kairali Ayurvedic Centre">
+        <img src="kair7.jpeg" alt="Kairali Ayurvedic Centre">
+      </div>
       <div class="dosha-grid">
         <div class="dosha-card"><span class="sym">💨</span><h3>Vata (فاتا)</h3><p class="i18n" data-en="The energy of movement — governs breathing, blood circulation, and the nervous system">طاقة الحركة — تتحكم بالتنفس والدورة الدموية والجهاز العصبي</p></div>
         <div class="dosha-card"><span class="sym">🔥</span><h3>Pitta (بيتا)</h3><p class="i18n" data-en="The energy of heat — responsible for digestion, metabolism, and transformation">طاقة الحرارة — مسؤولة عن الهضم والتمثيل الغذائي والتحول</p></div>
@@ -431,6 +415,8 @@
         <p class="eyebrow i18n" data-en="CUSTOMER REVIEWS">آراء الزبونات</p>
         <h2 class="i18n" data-en="Real Experiences From Our Guests">تجارب حقيقية من زبوناتنا</h2>
       </div>
+
+      <img class="page-photo" src="screenshot.png" alt="Kairali Ayurvedic Centre">
 
       <div class="rating-summary" id="ratingSummary"></div>
 
@@ -493,6 +479,7 @@
   <!-- BOOKING -->
   <section class="page" id="page-booking" hidden>
     <div class="wrap">
+      <span class="proto-badge i18n" data-en="For Women Only 🌸">خاص بالنساء فقط 🌸</span>
       <div class="steps" id="steps"></div>
 
       <section class="panel" id="panel-service">
