@@ -477,6 +477,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         <label class="field-label i18n" data-en="Your Experience With Us" for="reviewText">تجربتچ وياهم</label>
         <textarea id="reviewText" data-ph-ar="شلون كانت تجربتچ في Kairali؟" data-ph-en="How was your experience at Kairali?" placeholder="شلون كانت تجربتچ في Kairali؟"></textarea>
         <button class="btn-primary i18n" id="submitReviewBtn" disabled data-en="Post Review">انشرين رأيچ</button>
+        <p class="note i18n" id="reviewSentNote" hidden data-en="Thank you! Your review will appear after a quick review by our team.">يعطيچ العافية! رأيچ راح يظهر بعد ما نراجعه.</p>
       </div>
 
       <div id="reviewsList"></div>
@@ -1087,17 +1088,43 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     document.getElementById('panel-done').hidden = true; goToStep(1);
   };
 
-  /* ---------- reviews (visitor-submitted) ---------- */
-  var REVIEWS_KEY = 'kairali_proto_reviews_v1';
-  function loadReviews(){ try{ var raw = localStorage.getItem(REVIEWS_KEY); if(raw) return JSON.parse(raw); }catch(e){} return []; }
-  function saveReviews(list){ try{ localStorage.setItem(REVIEWS_KEY, JSON.stringify(list)); }catch(e){} }
-  var reviews = loadReviews();
+  /* ---------- reviews (visitor-submitted, moderated) ---------- */
+  async function fetchApprovedReviews(){
+    try{
+      var res = await fetch(SUPABASE_URL+'/rest/v1/reviews?approved=eq.true&select=name,rating,comment,created_at&order=created_at.desc', {
+        headers:{ apikey:SUPABASE_ANON_KEY, Authorization:'Bearer '+SUPABASE_ANON_KEY }
+      });
+      if(!res.ok) return [];
+      var rows = await res.json();
+      return rows.map(function(r){ return { name:r.name, rating:r.rating, comment:r.comment, date:String(r.created_at).slice(0,10) }; });
+    }catch(e){ return []; }
+  }
+  async function insertReview(r){
+    var res = await fetch(SUPABASE_URL+'/rest/v1/reviews', {
+      method:'POST',
+      headers:{ apikey:SUPABASE_ANON_KEY, Authorization:'Bearer '+SUPABASE_ANON_KEY, 'Content-Type':'application/json', Prefer:'return=minimal' },
+      body: JSON.stringify({ name:r.name, rating:r.rating, comment:r.comment })
+    });
+    if(!res.ok) throw new Error('review insert failed');
+  }
+  function notifyNewReview(r){
+    try{
+      fetch(APPS_SCRIPT_URL, {
+        method:'POST',
+        mode:'no-cors',
+        body: JSON.stringify({ type:'review', record:{ name:r.name, rating:r.rating, comment:r.comment } })
+      }).catch(function(){});
+    }catch(e){}
+  }
+  var reviews = [];
+  async function refreshReviews(){ reviews = await fetchApprovedReviews(); renderReviews(); }
   var pickedStars = 0;
 
   var starPicker = document.getElementById('starPicker');
   var reviewName = document.getElementById('reviewName');
   var reviewText = document.getElementById('reviewText');
   var submitReviewBtn = document.getElementById('submitReviewBtn');
+  var reviewSentNote = document.getElementById('reviewSentNote');
 
   function renderStarPicker(){
     Array.prototype.forEach.call(starPicker.children, function(btn){
@@ -1159,13 +1186,19 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   }
   function renderReviews(){ renderRatingSummary(); renderReviewsList(); renderHomeReviews(); }
 
-  submitReviewBtn.onclick = function(){
-    var today = new Date();
-    var dateLabel = today.getFullYear()+'/'+pad(today.getMonth()+1)+'/'+pad(today.getDate());
-    reviews.push({ name: reviewName.value.trim(), rating: pickedStars, comment: reviewText.value.trim(), date: dateLabel });
-    saveReviews(reviews);
-    reviewName.value=''; reviewText.value=''; pickedStars=0;
-    renderStarPicker(); validateReviewForm(); renderReviews();
+  submitReviewBtn.onclick = async function(){
+    submitReviewBtn.disabled = true;
+    var newReview = { name: reviewName.value.trim(), rating: pickedStars, comment: reviewText.value.trim() };
+    try{
+      await insertReview(newReview);
+      notifyNewReview(newReview);
+      reviewName.value=''; reviewText.value=''; pickedStars=0;
+      renderStarPicker(); validateReviewForm();
+      if(reviewSentNote) reviewSentNote.hidden = false;
+    }catch(e){
+      alert(LANG==='ar' ? 'صار خطأ، حاولي مرة ثانية' : 'Something went wrong, please try again.');
+      submitReviewBtn.disabled = false;
+    }
   };
 
   /* ---------- FAQ ---------- */
@@ -1222,6 +1255,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   captureOriginals();
   renderStarPicker();
   applyLanguage(LANG);
+  refreshReviews();
   showPage('home');
 })();
 </script>
