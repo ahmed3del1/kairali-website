@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /complaints/
+Disallow: /privacy/
+Sitemap: https://kairali-website.vercel.app/sitemap.xml
